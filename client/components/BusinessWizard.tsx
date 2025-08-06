@@ -13,6 +13,7 @@ import {
 export default function BusinessWizard() {
   const [isExpanded, setIsExpanded] = useState(false);
   const [currentTip, setCurrentTip] = useState(0);
+  const [showTip, setShowTip] = useState(true);
 
   const wizardTips = [
     "💡 Did you know? MSME registration gives you access to 200+ government schemes!",
