@@ -247,10 +247,10 @@ export default function Index() {
       <section className="py-20 bg-techbiz-purple/10 text-white relative overflow-hidden">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-techbiz-white">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-foreground">
               Select Your Business Type
             </h2>
-            <p className="text-xl mb-12 text-techbiz-grey">
+            <p className="text-xl mb-12 text-muted-foreground">
               Get personalized guidance based on your business structure
             </p>
 
