@@ -272,7 +272,7 @@ export default function Index() {
               <Link to="/business-types">
                 <Button
                   size="lg"
-                  className="bg-techbiz-purple hover:bg-techbiz-purple/90 text-techbiz-black px-8 py-6 text-lg"
+                  className="bg-techbiz-purple hover:bg-techbiz-purple/90 text-primary-foreground px-8 py-6 text-lg transition-all duration-300 hover:scale-105 hover:shadow-lg"
                 >
                   Get Started Now
                   <ArrowRight className="ml-2 h-5 w-5" />
