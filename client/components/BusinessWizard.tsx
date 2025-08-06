@@ -34,7 +34,7 @@ export default function BusinessWizard() {
     <>
       {/* Floating Wizard Button */}
       {!isExpanded && (
-        <div className="fixed bottom-6 right-6 z-50">
+        <div className="fixed bottom-6 right-6 z-50 max-w-[calc(100vw-3rem)]">
           <Button
             onClick={() => setIsExpanded(true)}
             className="p-4 rounded-full shadow-lg"
