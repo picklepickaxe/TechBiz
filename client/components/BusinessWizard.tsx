@@ -77,7 +77,7 @@ export default function BusinessWizard() {
       {/* Expanded Wizard Panel */}
       {isExpanded && (
         <div className="fixed inset-0 z-50 bg-black/50 backdrop-blur-sm">
-          <div className="fixed bottom-0 right-0 w-full max-w-md h-[500px] shadow-2xl m-4 rounded-lg overflow-hidden" style={{ backgroundColor: '#fcd2f1' }}>
+          <div className="fixed bottom-4 right-4 w-full max-w-md max-h-[calc(100vh-2rem)] h-[500px] shadow-2xl rounded-lg overflow-hidden" style={{ backgroundColor: '#fcd2f1' }}>
             <div className="h-full flex flex-col">
               {/* Header */}
               <div className="p-6" style={{ backgroundColor: '#fcd2f1' }}>
