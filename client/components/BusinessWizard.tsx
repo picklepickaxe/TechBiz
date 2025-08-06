@@ -50,7 +50,7 @@ export default function BusinessWizard() {
           </Button>
 
           {/* Floating tip bubble */}
-          <div className="absolute bottom-full right-0 mb-4 w-80 max-w-[calc(100vw-2rem)] mr-4">
+          <div className="absolute bottom-full right-0 mb-4 w-80 max-w-[calc(100vw-3rem)] -translate-x-4">
             <Card className="shadow-xl" style={{ backgroundColor: '#fcd2f1', borderColor: '#fcd2f1' }}>
               <CardContent className="p-4">
                 <div className="flex items-start gap-3">
