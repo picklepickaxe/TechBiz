@@ -9,41 +9,41 @@
    * A different format will require also updating the theme in tailwind.config.ts.
   */
   :root {
-    --background: 291 25% 93%;
+    --background: 203 68% 85%;
     --foreground: 222 84% 4.9%;
 
-    --card: 291 25% 95%;
+    --card: 203 68% 88%;
     --card-foreground: 222 84% 4.9%;
 
-    --popover: 0 0% 100%;
+    --popover: 203 68% 88%;
     --popover-foreground: 222 84% 4.9%;
 
-    --primary: 280 100% 60%;
+    --primary: 205 100% 42%;
     --primary-foreground: 0 0% 98%;
 
-    --secondary: 210 40% 96%;
+    --secondary: 203 40% 82%;
     --secondary-foreground: 222 47% 11%;
 
-    --muted: 210 40% 96%;
+    --muted: 203 40% 80%;
     --muted-foreground: 215 16% 47%;
 
-    --accent: 285 85% 65%;
+    --accent: 205 100% 45%;
     --accent-foreground: 0 0% 98%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 214 32% 91%;
-    --input: 214 32% 91%;
-    --ring: 280 100% 60%;
+    --border: 203 32% 75%;
+    --input: 203 32% 78%;
+    --ring: 205 100% 42%;
 
     --radius: 0.75rem;
 
-    --techbiz-purple: 280 100% 60%;
-    --techbiz-purple-light: 285 85% 65%;
+    --techbiz-purple: 205 100% 42%;
+    --techbiz-purple-light: 205 85% 50%;
     --techbiz-white: 222 84% 4.9%;
     --techbiz-grey: 215 16% 47%;
-    --techbiz-black: 0 0% 100%;
+    --techbiz-black: 203 68% 85%;
 
     --sidebar-background: 0 0% 98%;
 
