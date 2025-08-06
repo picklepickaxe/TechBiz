@@ -37,13 +37,13 @@ export default function AuthModal({ isOpen, onClose, defaultTab = "login" }: Aut
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="sm:max-w-[450px] p-0 overflow-hidden bg-techbiz-black border-techbiz-purple/20">
+      <DialogContent className="sm:max-w-[450px] p-0 overflow-hidden bg-card border-techbiz-purple/20">
         <div className="relative">
 
           <DialogHeader className="p-6 pb-2">
-            <DialogTitle className="flex items-center gap-3 text-2xl font-bold text-techbiz-white">
+            <DialogTitle className="flex items-center gap-3 text-2xl font-bold text-foreground">
               <div className="p-2 bg-techbiz-purple rounded-full">
-                <Building2 className="h-6 w-6 text-techbiz-black" />
+                <Building2 className="h-6 w-6 text-primary-foreground" />
               </div>
               Welcome to TechBiz
             </DialogTitle>
@@ -69,35 +69,35 @@ export default function AuthModal({ isOpen, onClose, defaultTab = "login" }: Aut
               <TabsContent value="login" className="space-y-4">
                 <Card className="border-0 shadow-none bg-transparent">
                   <CardHeader className="px-0 pb-4">
-                    <CardDescription className="text-center text-techbiz-grey">
+                    <CardDescription className="text-center text-muted-foreground">
                       Continue your business journey with TechBiz
                     </CardDescription>
                   </CardHeader>
                   <CardContent className="px-0 space-y-4">
                     <form onSubmit={handleSubmit} className="space-y-4">
                       <div className="space-y-2">
-                        <Label htmlFor="email" className="text-techbiz-white font-medium">Email</Label>
+                        <Label htmlFor="email" className="text-foreground font-medium">Email</Label>
                         <div className="relative">
                           <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-techbiz-purple" />
                           <Input
                             id="email"
                             type="email"
                             placeholder="Enter your email"
-                            className="pl-10 border-techbiz-purple/30 focus:border-techbiz-purple bg-techbiz-black text-techbiz-white"
+                            className="pl-10 border-techbiz-purple/30 focus:border-techbiz-purple"
                             required
                           />
                         </div>
                       </div>
                       
                       <div className="space-y-2">
-                        <Label htmlFor="password" className="text-techbiz-white font-medium">Password</Label>
+                        <Label htmlFor="password" className="text-foreground font-medium">Password</Label>
                         <div className="relative">
                           <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-techbiz-purple" />
                           <Input
                             id="password"
                             type={showPassword ? "text" : "password"}
                             placeholder="Enter your password"
-                            className="pl-10 pr-10 border-techbiz-purple/30 focus:border-techbiz-purple bg-techbiz-black text-techbiz-white"
+                            className="pl-10 pr-10 border-techbiz-purple/30 focus:border-techbiz-purple"
                             required
                           />
                           <Button
@@ -118,12 +118,12 @@ export default function AuthModal({ isOpen, onClose, defaultTab = "login" }: Aut
 
                       <Button
                         type="submit"
-                        className="w-full bg-techbiz-purple hover:bg-techbiz-purple/90 text-techbiz-black font-medium py-6"
+                        className="w-full bg-techbiz-purple hover:bg-techbiz-purple/90 text-primary-foreground font-medium py-6"
                         disabled={isLoading}
                       >
                         {isLoading ? (
                           <div className="flex items-center gap-2">
-                            <div className="w-4 h-4 border-2 border-techbiz-black/30 border-t-techbiz-black rounded-full animate-spin"></div>
+                            <div className="w-4 h-4 border-2 border-primary-foreground/30 border-t-primary-foreground rounded-full animate-spin"></div>
                             Signing In...
                           </div>
                         ) : (
