@@ -18,7 +18,7 @@ export default function BusinessWizard() {
     "💡 Did you know? MSME registration gives you access to 200+ government schemes!",
     "🚀 Startups with DPIIT recognition get 3 years of income tax exemption!",
     "⚡ GST registration can be completed online in just 3-5 days!",
-    "���� Professional tax varies by state - Delhi has competitive rates!",
+    "🎯 Professional tax varies by state - Delhi has competitive rates!",
     "🏆 Shop & Establishment license is mandatory for all commercial setups!"
   ];
 
@@ -128,34 +128,31 @@ export default function BusinessWizard() {
                   </div>
                 </div>
 
-                <div className="border-t border-black/20 pt-4">
-                  <h4 className="font-semibold mb-3 flex items-center gap-2" style={{ color: '#000' }}>
-                    <MessageCircle className="h-4 w-4" style={{ color: '#333' }} />
+                <div className="border-t border-border dark:border-gray-600 pt-4">
+                  <h4 className="font-semibold mb-3 flex items-center gap-2 text-foreground dark:text-white">
+                    <MessageCircle className="h-4 w-4 text-muted-foreground dark:text-gray-300" />
                     Quick Actions
                   </h4>
 
                   <div className="space-y-2">
                     <Button
                       variant="outline"
-                      className="w-full justify-start border-black/30 hover:bg-white/20"
-                      style={{ color: '#333', borderColor: 'rgba(0,0,0,0.3)' }}
+                      className="w-full justify-start border-border dark:border-gray-500 hover:bg-muted dark:hover:bg-white/20 text-muted-foreground dark:text-gray-300"
                     >
-                      <Sparkles className="mr-2 h-4 w-4" style={{ color: '#333' }} />
+                      <Sparkles className="mr-2 h-4 w-4" />
                       Find My Perfect Business Type
                     </Button>
 
                     <Button
                       variant="outline"
-                      className="w-full justify-start border-black/30 hover:bg-white/20"
-                      style={{ color: '#333', borderColor: 'rgba(0,0,0,0.3)' }}
+                      className="w-full justify-start border-border dark:border-gray-500 hover:bg-muted dark:hover:bg-white/20 text-muted-foreground dark:text-gray-300"
                     >
-                      <Wand2 className="mr-2 h-4 w-4" style={{ color: '#333' }} />
+                      <Wand2 className="mr-2 h-4 w-4" />
                       Check Scheme Eligibility
                     </Button>
 
                     <Button
-                      className="w-full hover:opacity-90"
-                      style={{ backgroundColor: '#000', color: '#fff' }}
+                      className="w-full bg-foreground dark:bg-white text-background dark:text-black hover:opacity-90"
                     >
                       Start Business Journey
                       <ArrowRight className="ml-2 h-4 w-4" />
