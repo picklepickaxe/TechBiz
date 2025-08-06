@@ -37,7 +37,10 @@ export default function BusinessWizard() {
       {!isExpanded && (
         <div className="fixed bottom-6 right-6 z-50 max-w-[calc(100vw-3rem)]">
           <Button
-            onClick={() => setIsExpanded(true)}
+            onClick={() => {
+              setIsExpanded(true);
+              setShowTip(true); // Show tip again when opening wizard
+            }}
             className="p-4 rounded-full shadow-lg bg-background dark:bg-[#696669] text-foreground dark:text-white border-2 border-border dark:border-[#696669]"
           >
             <div className="flex items-center gap-3">
