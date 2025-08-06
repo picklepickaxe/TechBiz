@@ -176,55 +176,55 @@ export default function AuthModal({ isOpen, onClose, defaultTab = "login" }: Aut
                       </div>
 
                       <div className="space-y-2">
-                        <Label htmlFor="signupEmail" className="text-techbiz-navy font-medium">Email</Label>
+                        <Label htmlFor="signupEmail" className="text-techbiz-white font-medium">Email</Label>
                         <div className="relative">
-                          <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-techbiz-blue-primary" />
+                          <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-techbiz-purple" />
                           <Input
                             id="signupEmail"
                             type="email"
                             placeholder="Enter your email"
-                            className="pl-10 border-techbiz-blue-primary/30 focus:border-techbiz-blue-primary transition-colors"
+                            className="pl-10 border-techbiz-purple/30 focus:border-techbiz-purple bg-techbiz-black text-techbiz-white"
                             required
                           />
                         </div>
                       </div>
 
                       <div className="space-y-2">
-                        <Label htmlFor="phone" className="text-techbiz-navy font-medium">Phone Number</Label>
+                        <Label htmlFor="phone" className="text-techbiz-white font-medium">Phone Number</Label>
                         <div className="relative">
-                          <Phone className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-techbiz-blue-primary" />
+                          <Phone className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-techbiz-purple" />
                           <Input
                             id="phone"
                             type="tel"
                             placeholder="Enter your phone number"
-                            className="pl-10 border-techbiz-blue-primary/30 focus:border-techbiz-blue-primary transition-colors"
+                            className="pl-10 border-techbiz-purple/30 focus:border-techbiz-purple bg-techbiz-black text-techbiz-white"
                             required
                           />
                         </div>
                       </div>
-                      
+
                       <div className="space-y-2">
-                        <Label htmlFor="signupPassword" className="text-techbiz-navy font-medium">Password</Label>
+                        <Label htmlFor="signupPassword" className="text-techbiz-white font-medium">Password</Label>
                         <div className="relative">
-                          <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-techbiz-blue-primary" />
+                          <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-techbiz-purple" />
                           <Input
                             id="signupPassword"
                             type={showPassword ? "text" : "password"}
                             placeholder="Create a password"
-                            className="pl-10 pr-10 border-techbiz-blue-primary/30 focus:border-techbiz-blue-primary transition-colors"
+                            className="pl-10 pr-10 border-techbiz-purple/30 focus:border-techbiz-purple bg-techbiz-black text-techbiz-white"
                             required
                           />
                           <Button
                             type="button"
                             variant="ghost"
                             size="sm"
-                            className="absolute right-1 top-1/2 transform -translate-y-1/2 h-8 w-8 p-0 hover:bg-techbiz-blue-primary/10"
+                            className="absolute right-1 top-1/2 transform -translate-y-1/2 h-8 w-8 p-0 hover:bg-techbiz-purple/10"
                             onClick={() => setShowPassword(!showPassword)}
                           >
                             {showPassword ? (
-                              <EyeOff className="h-4 w-4 text-techbiz-blue-primary" />
+                              <EyeOff className="h-4 w-4 text-techbiz-purple" />
                             ) : (
-                              <Eye className="h-4 w-4 text-techbiz-blue-primary" />
+                              <Eye className="h-4 w-4 text-techbiz-purple" />
                             )}
                           </Button>
                         </div>
