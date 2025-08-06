@@ -63,21 +63,21 @@ export default function Index() {
   return (
     <div className="min-h-screen bg-background">
       {/* Navigation */}
-      <nav className="border-b border-techbiz-grey/20 bg-techbiz-black/95 backdrop-blur sticky top-0 z-50">
+      <nav className="border-b bg-background/95 backdrop-blur sticky top-0 z-50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center space-x-2">
               <Building2 className="h-8 w-8 text-techbiz-purple" />
-              <span className="text-2xl font-bold text-techbiz-white">TechBiz</span>
+              <span className="text-2xl font-bold text-foreground">TechBiz</span>
             </div>
             <div className="hidden md:flex items-center space-x-6">
-              <Link to="/business-types" className="text-techbiz-grey hover:text-techbiz-purple transition-colors font-medium">
+              <Link to="/business-types" className="text-muted-foreground hover:text-techbiz-purple transition-colors font-medium">
                 Business Types
               </Link>
-              <Link to="/schemes" className="text-techbiz-grey hover:text-techbiz-purple transition-colors font-medium">
+              <Link to="/schemes" className="text-muted-foreground hover:text-techbiz-purple transition-colors font-medium">
                 Schemes
               </Link>
-              <Link to="/compliance" className="text-techbiz-grey hover:text-techbiz-purple transition-colors font-medium">
+              <Link to="/compliance" className="text-muted-foreground hover:text-techbiz-purple transition-colors font-medium">
                 Compliance
               </Link>
               <ThemeToggle />
@@ -85,14 +85,14 @@ export default function Index() {
                 variant="outline"
                 size="sm"
                 onClick={() => setAuthModal({ isOpen: true, type: 'login' })}
-                className="border-techbiz-purple/30 text-techbiz-purple hover:bg-techbiz-purple hover:text-techbiz-black transition-all duration-300"
+                className="border-techbiz-purple/30 text-techbiz-purple hover:bg-techbiz-purple hover:text-primary-foreground transition-all duration-300"
               >
                 Log In
               </Button>
               <Button
                 size="sm"
                 onClick={() => setAuthModal({ isOpen: true, type: 'signup' })}
-                className="bg-techbiz-purple hover:bg-techbiz-purple/90 text-techbiz-black"
+                className="bg-techbiz-purple hover:bg-techbiz-purple/90 text-primary-foreground"
               >
                 Sign Up
               </Button>
@@ -110,7 +110,7 @@ export default function Index() {
             backgroundImage: `url('https://cdn.builder.io/api/v1/assets/726f008e16a94111b516c224280e89a9/project-4682c6?format=webp&width=1200')`
           }}
         >
-          <div className="absolute inset-0 bg-techbiz-black/80"></div>
+          <div className="absolute inset-0 bg-background/80"></div>
         </div>
         
         <div className="relative container mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32">
@@ -119,26 +119,26 @@ export default function Index() {
               Solutions for Ease of Doing Business (EODB)
             </Badge>
             
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-techbiz-white mb-6 leading-tight">
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-foreground mb-6 leading-tight">
               Easing out business activities for
               <span className="bg-gradient-to-r from-techbiz-purple to-techbiz-purple-light bg-clip-text text-transparent animate-gradient-shift"> growth</span>
             </h1>
             
-            <p className="text-xl md:text-2xl text-techbiz-grey mb-8 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed">
               Navigate Delhi's business landscape with confidence. From registration to compliance,
               we simplify every step of your entrepreneurial journey.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
               <Link to="/business-types">
-                <Button size="lg" className="bg-techbiz-purple hover:bg-techbiz-purple/90 text-techbiz-black px-8 py-6 text-lg">
+                <Button size="lg" className="bg-techbiz-purple hover:bg-techbiz-purple/90 text-primary-foreground px-8 py-6 text-lg">
                   Start Your Business Journey
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
               </Link>
 
               <Link to="/schemes">
-                <Button variant="outline" size="lg" className="border-techbiz-purple text-techbiz-purple hover:bg-techbiz-purple hover:text-techbiz-black px-8 py-6 text-lg">
+                <Button variant="outline" size="lg" className="border-techbiz-purple text-techbiz-purple hover:bg-techbiz-purple hover:text-primary-foreground px-8 py-6 text-lg">
                   Compare Schemes
                 </Button>
               </Link>
@@ -148,10 +148,10 @@ export default function Index() {
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16">
               {stats.map((stat, index) => (
                 <div key={index} className="text-center">
-                  <div className="text-3xl md:text-4xl font-bold text-techbiz-white mb-2">
+                  <div className="text-3xl md:text-4xl font-bold text-foreground mb-2">
                     {stat.value}
                   </div>
-                  <div className="text-techbiz-grey text-sm md:text-base">
+                  <div className="text-muted-foreground text-sm md:text-base">
                     {stat.label}
                   </div>
                 </div>
