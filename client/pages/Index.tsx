@@ -317,8 +317,8 @@ export default function Index() {
             </div>
 
             <div>
-              <h3 className="font-semibold mb-4 text-techbiz-white">Services</h3>
-              <ul className="space-y-2 text-techbiz-grey">
+              <h3 className="font-semibold mb-4 text-foreground">Services</h3>
+              <ul className="space-y-2 text-muted-foreground">
                 <li><Link to="/business-types" className="hover:text-techbiz-purple transition-colors">Business Registration</Link></li>
                 <li><Link to="/compliance" className="hover:text-techbiz-purple transition-colors">License Management</Link></li>
                 <li><Link to="/schemes" className="hover:text-techbiz-purple transition-colors">Government Schemes</Link></li>
@@ -326,8 +326,8 @@ export default function Index() {
             </div>
 
             <div>
-              <h3 className="font-semibold mb-4 text-techbiz-white">Resources</h3>
-              <ul className="space-y-2 text-techbiz-grey">
+              <h3 className="font-semibold mb-4 text-foreground">Resources</h3>
+              <ul className="space-y-2 text-muted-foreground">
                 <li><Link to="/help" className="hover:text-techbiz-purple transition-colors">Help Center</Link></li>
                 <li><Link to="/guides" className="hover:text-techbiz-purple transition-colors">Business Guides</Link></li>
                 <li><Link to="/contact" className="hover:text-techbiz-purple transition-colors">Contact Us</Link></li>
