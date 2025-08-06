@@ -1,22 +1,34 @@
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 import { Link } from "react-router-dom";
 import { useState } from "react";
-import { 
-  Building2, 
-  Search, 
-  Filter, 
-  ArrowRight, 
+import {
+  Building2,
+  Search,
+  Filter,
+  ArrowRight,
   ChevronLeft,
   Users,
   DollarSign,
   Clock,
   CheckCircle,
   Star,
-  TrendingUp
+  TrendingUp,
 } from "lucide-react";
 
 export default function Schemes() {
@@ -34,7 +46,7 @@ export default function Schemes() {
       benefits: [
         "Collateral-free loans up to ₹10,000",
         "7% interest subsidy on regular repayment",
-        "Digital payment incentives"
+        "Digital payment incentives",
       ],
       eligibility: "Street vendors with vending certificate",
       loanAmount: "₹10,000 - ₹50,000",
@@ -42,7 +54,7 @@ export default function Schemes() {
       processingTime: "15-30 days",
       rating: 4.5,
       applicationsCount: "2.5M+",
-      featured: true
+      featured: true,
     },
     {
       id: 2,
@@ -52,8 +64,8 @@ export default function Schemes() {
       description: "Funding for micro and small enterprises",
       benefits: [
         "Shishu: Up to ₹50,000",
-        "Kishore: ₹50,000 to ₹5 lakh", 
-        "Tarun: ₹5 lakh to ₹10 lakh"
+        "Kishore: ₹50,000 to ₹5 lakh",
+        "Tarun: ₹5 lakh to ₹10 lakh",
       ],
       eligibility: "Non-corporate, non-farm small/micro enterprises",
       loanAmount: "₹50,000 - ₹10,00,000",
@@ -61,7 +73,7 @@ export default function Schemes() {
       processingTime: "7-15 days",
       rating: 4.7,
       applicationsCount: "3.8M+",
-      featured: true
+      featured: true,
     },
     {
       id: 3,
@@ -72,7 +84,7 @@ export default function Schemes() {
       benefits: [
         "Loans between ₹10 lakh to ₹1 crore",
         "Composite loan facility",
-        "Lower margin money requirements"
+        "Lower margin money requirements",
       ],
       eligibility: "SC/ST/Women aged 18+ with new business idea",
       loanAmount: "₹10,00,000 - ₹1,00,00,000",
@@ -80,7 +92,7 @@ export default function Schemes() {
       processingTime: "30-45 days",
       rating: 4.2,
       applicationsCount: "1.2M+",
-      featured: false
+      featured: false,
     },
     {
       id: 4,
@@ -91,7 +103,7 @@ export default function Schemes() {
       benefits: [
         "Seed funding up to ₹20 lakh",
         "3-year income tax exemption",
-        "Faster patent examination"
+        "Faster patent examination",
       ],
       eligibility: "DPIIT-recognized startups less than 2 years old",
       loanAmount: "₹5,00,000 - ₹20,00,000",
@@ -99,7 +111,7 @@ export default function Schemes() {
       processingTime: "45-60 days",
       rating: 4.8,
       applicationsCount: "85K+",
-      featured: true
+      featured: true,
     },
     {
       id: 5,
@@ -110,7 +122,7 @@ export default function Schemes() {
       benefits: [
         "Subsidy on rent for incubation",
         "Reimbursement of registration fees",
-        "Marketing support"
+        "Marketing support",
       ],
       eligibility: "Startups registered in Delhi",
       loanAmount: "₹2,00,000 - ₹15,00,000",
@@ -118,7 +130,7 @@ export default function Schemes() {
       processingTime: "30-45 days",
       rating: 4.3,
       applicationsCount: "12K+",
-      featured: false
+      featured: false,
     },
     {
       id: 6,
@@ -129,7 +141,7 @@ export default function Schemes() {
       benefits: [
         "35% credit-linked subsidy",
         "Technical support and training",
-        "Brand building assistance"
+        "Brand building assistance",
       ],
       eligibility: "Existing unorganized food processing enterprises",
       loanAmount: "₹1,00,000 - ₹10,00,000",
@@ -137,39 +149,42 @@ export default function Schemes() {
       processingTime: "20-30 days",
       rating: 4.4,
       applicationsCount: "180K+",
-      featured: false
-    }
+      featured: false,
+    },
   ];
 
   const categories = [
     "all",
     "MSME",
-    "Startups", 
+    "Startups",
     "Street Vendors",
     "SC/ST/Women",
     "Delhi State",
-    "Food Processing"
+    "Food Processing",
   ];
 
   const businessTypes = [
     "all",
     "Sole Proprietorship",
-    "Partnership", 
+    "Partnership",
     "MSME",
-    "DPIIT Startup"
+    "DPIIT Startup",
   ];
 
-  const filteredSchemes = schemes.filter(scheme => {
-    const matchesSearch = scheme.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         scheme.description.toLowerCase().includes(searchTerm.toLowerCase());
-    const matchesCategory = selectedCategory === "all" || scheme.category === selectedCategory;
-    const matchesBusinessType = selectedBusinessType === "all" || 
-                               scheme.businessTypes.includes(selectedBusinessType);
-    
+  const filteredSchemes = schemes.filter((scheme) => {
+    const matchesSearch =
+      scheme.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      scheme.description.toLowerCase().includes(searchTerm.toLowerCase());
+    const matchesCategory =
+      selectedCategory === "all" || scheme.category === selectedCategory;
+    const matchesBusinessType =
+      selectedBusinessType === "all" ||
+      scheme.businessTypes.includes(selectedBusinessType);
+
     return matchesSearch && matchesCategory && matchesBusinessType;
   });
 
-  const featuredSchemes = filteredSchemes.filter(scheme => scheme.featured);
+  const featuredSchemes = filteredSchemes.filter((scheme) => scheme.featured);
 
   return (
     <div className="min-h-screen bg-background">
@@ -179,7 +194,9 @@ export default function Schemes() {
           <div className="flex justify-between items-center h-16">
             <Link to="/" className="flex items-center space-x-2">
               <Building2 className="h-8 w-8 text-techbiz-blue" />
-              <span className="text-2xl font-bold text-techbiz-navy">TechBiz</span>
+              <span className="text-2xl font-bold text-techbiz-navy">
+                TechBiz
+              </span>
             </Link>
             <div className="flex items-center space-x-4">
               <Link to="/">
@@ -191,9 +208,7 @@ export default function Schemes() {
               <Button variant="outline" size="sm">
                 Log In
               </Button>
-              <Button size="sm">
-                Sign Up
-              </Button>
+              <Button size="sm">Sign Up</Button>
             </div>
           </div>
         </div>
@@ -207,8 +222,8 @@ export default function Schemes() {
               Government Schemes Dashboard
             </h1>
             <p className="text-xl text-blue-100 mb-8">
-              Discover and compare government schemes tailored for your business type.
-              Find funding opportunities, subsidies, and support programs.
+              Discover and compare government schemes tailored for your business
+              type. Find funding opportunities, subsidies, and support programs.
             </p>
           </div>
         </div>
@@ -222,22 +237,25 @@ export default function Schemes() {
               {/* Search */}
               <div className="relative flex-1">
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />
-                <Input 
+                <Input
                   placeholder="Search schemes by name or description..."
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
                   className="pl-10"
                 />
               </div>
-              
+
               {/* Filters */}
               <div className="flex gap-4">
-                <Select value={selectedCategory} onValueChange={setSelectedCategory}>
+                <Select
+                  value={selectedCategory}
+                  onValueChange={setSelectedCategory}
+                >
                   <SelectTrigger className="w-[180px]">
                     <SelectValue placeholder="Category" />
                   </SelectTrigger>
                   <SelectContent>
-                    {categories.map(category => (
+                    {categories.map((category) => (
                       <SelectItem key={category} value={category}>
                         {category === "all" ? "All Categories" : category}
                       </SelectItem>
@@ -245,12 +263,15 @@ export default function Schemes() {
                   </SelectContent>
                 </Select>
 
-                <Select value={selectedBusinessType} onValueChange={setSelectedBusinessType}>
+                <Select
+                  value={selectedBusinessType}
+                  onValueChange={setSelectedBusinessType}
+                >
                   <SelectTrigger className="w-[180px]">
                     <SelectValue placeholder="Business Type" />
                   </SelectTrigger>
                   <SelectContent>
-                    {businessTypes.map(type => (
+                    {businessTypes.map((type) => (
                       <SelectItem key={type} value={type}>
                         {type === "all" ? "All Types" : type}
                       </SelectItem>
@@ -270,37 +291,56 @@ export default function Schemes() {
             <div className="max-w-6xl mx-auto">
               <div className="flex items-center gap-2 mb-8">
                 <Star className="h-6 w-6 text-yellow-500" />
-                <h2 className="text-2xl font-bold text-techbiz-navy">Featured Schemes</h2>
+                <h2 className="text-2xl font-bold text-techbiz-navy">
+                  Featured Schemes
+                </h2>
               </div>
-              
+
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {featuredSchemes.map(scheme => (
-                  <Card key={scheme.id} className="border-2 border-yellow-200 bg-yellow-50/50 hover:shadow-xl transition-all hover:-translate-y-1">
+                {featuredSchemes.map((scheme) => (
+                  <Card
+                    key={scheme.id}
+                    className="border-2 border-yellow-200 bg-yellow-50/50 hover:shadow-xl transition-all hover:-translate-y-1"
+                  >
                     <CardHeader>
                       <div className="flex justify-between items-start mb-2">
-                        <Badge className="bg-yellow-500 text-white">Featured</Badge>
+                        <Badge className="bg-yellow-500 text-white">
+                          Featured
+                        </Badge>
                         <div className="flex items-center gap-1">
                           <Star className="h-4 w-4 text-yellow-500" />
-                          <span className="text-sm font-medium">{scheme.rating}</span>
+                          <span className="text-sm font-medium">
+                            {scheme.rating}
+                          </span>
                         </div>
                       </div>
-                      <CardTitle className="text-xl text-techbiz-navy">{scheme.name}</CardTitle>
-                      <CardDescription className="text-base">{scheme.description}</CardDescription>
+                      <CardTitle className="text-xl text-techbiz-navy">
+                        {scheme.name}
+                      </CardTitle>
+                      <CardDescription className="text-base">
+                        {scheme.description}
+                      </CardDescription>
                     </CardHeader>
                     <CardContent className="space-y-4">
                       <div className="grid grid-cols-2 gap-4 text-sm">
                         <div>
                           <p className="text-techbiz-gray">Loan Amount</p>
-                          <p className="font-semibold text-techbiz-navy">{scheme.loanAmount}</p>
+                          <p className="font-semibold text-techbiz-navy">
+                            {scheme.loanAmount}
+                          </p>
                         </div>
                         <div>
                           <p className="text-techbiz-gray">Processing Time</p>
-                          <p className="font-semibold text-techbiz-navy">{scheme.processingTime}</p>
+                          <p className="font-semibold text-techbiz-navy">
+                            {scheme.processingTime}
+                          </p>
                         </div>
                       </div>
-                      
+
                       <div className="space-y-2">
-                        <p className="text-sm font-medium text-techbiz-navy">Key Benefits:</p>
+                        <p className="text-sm font-medium text-techbiz-navy">
+                          Key Benefits:
+                        </p>
                         <ul className="text-sm text-techbiz-gray space-y-1">
                           {scheme.benefits.slice(0, 2).map((benefit, index) => (
                             <li key={index} className="flex items-start gap-2">
@@ -349,36 +389,51 @@ export default function Schemes() {
             </div>
 
             <div className="space-y-6">
-              {filteredSchemes.map(scheme => (
-                <Card key={scheme.id} className="border-0 shadow-lg hover:shadow-xl transition-shadow">
+              {filteredSchemes.map((scheme) => (
+                <Card
+                  key={scheme.id}
+                  className="border-0 shadow-lg hover:shadow-xl transition-shadow"
+                >
                   <CardHeader>
                     <div className="flex justify-between items-start">
                       <div className="flex-1">
                         <div className="flex items-center gap-3 mb-2">
-                          <CardTitle className="text-xl text-techbiz-navy">{scheme.name}</CardTitle>
+                          <CardTitle className="text-xl text-techbiz-navy">
+                            {scheme.name}
+                          </CardTitle>
                           <Badge variant="outline" className="text-xs">
                             {scheme.category}
                           </Badge>
                           {scheme.featured && (
-                            <Badge className="bg-yellow-500 text-white text-xs">Featured</Badge>
+                            <Badge className="bg-yellow-500 text-white text-xs">
+                              Featured
+                            </Badge>
                           )}
                         </div>
-                        <CardDescription className="text-base mb-4">{scheme.description}</CardDescription>
-                        
+                        <CardDescription className="text-base mb-4">
+                          {scheme.description}
+                        </CardDescription>
+
                         <div className="flex flex-wrap gap-2 mb-4">
                           {scheme.businessTypes.map((type, index) => (
-                            <Badge key={index} variant="secondary" className="text-xs">
+                            <Badge
+                              key={index}
+                              variant="secondary"
+                              className="text-xs"
+                            >
                               {type}
                             </Badge>
                           ))}
                         </div>
                       </div>
-                      
+
                       <div className="text-right">
                         <div className="flex items-center gap-1 mb-2">
                           <Star className="h-4 w-4 text-yellow-500" />
                           <span className="font-medium">{scheme.rating}</span>
-                          <span className="text-sm text-gray-500">({scheme.applicationsCount})</span>
+                          <span className="text-sm text-gray-500">
+                            ({scheme.applicationsCount})
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -388,29 +443,44 @@ export default function Schemes() {
                     <div className="grid md:grid-cols-3 gap-6 mb-6">
                       {/* Loan Details */}
                       <div className="space-y-3">
-                        <h4 className="font-semibold text-techbiz-navy">Loan Details</h4>
+                        <h4 className="font-semibold text-techbiz-navy">
+                          Loan Details
+                        </h4>
                         <div className="space-y-2 text-sm">
                           <div className="flex justify-between">
                             <span className="text-techbiz-gray">Amount:</span>
-                            <span className="font-medium">{scheme.loanAmount}</span>
+                            <span className="font-medium">
+                              {scheme.loanAmount}
+                            </span>
                           </div>
                           <div className="flex justify-between">
                             <span className="text-techbiz-gray">Subsidy:</span>
-                            <span className="font-medium text-techbiz-green">{scheme.subsidyRate}</span>
+                            <span className="font-medium text-techbiz-green">
+                              {scheme.subsidyRate}
+                            </span>
                           </div>
                           <div className="flex justify-between">
-                            <span className="text-techbiz-gray">Processing:</span>
-                            <span className="font-medium">{scheme.processingTime}</span>
+                            <span className="text-techbiz-gray">
+                              Processing:
+                            </span>
+                            <span className="font-medium">
+                              {scheme.processingTime}
+                            </span>
                           </div>
                         </div>
                       </div>
 
                       {/* Benefits */}
                       <div className="space-y-3">
-                        <h4 className="font-semibold text-techbiz-navy">Key Benefits</h4>
+                        <h4 className="font-semibold text-techbiz-navy">
+                          Key Benefits
+                        </h4>
                         <ul className="space-y-1 text-sm">
                           {scheme.benefits.map((benefit, index) => (
-                            <li key={index} className="flex items-start gap-2 text-techbiz-gray">
+                            <li
+                              key={index}
+                              className="flex items-start gap-2 text-techbiz-gray"
+                            >
                               <CheckCircle className="h-3 w-3 text-techbiz-green mt-0.5 flex-shrink-0" />
                               {benefit}
                             </li>
@@ -420,8 +490,12 @@ export default function Schemes() {
 
                       {/* Eligibility */}
                       <div className="space-y-3">
-                        <h4 className="font-semibold text-techbiz-navy">Eligibility</h4>
-                        <p className="text-sm text-techbiz-gray">{scheme.eligibility}</p>
+                        <h4 className="font-semibold text-techbiz-navy">
+                          Eligibility
+                        </h4>
+                        <p className="text-sm text-techbiz-gray">
+                          {scheme.eligibility}
+                        </p>
                       </div>
                     </div>
 
@@ -430,12 +504,8 @@ export default function Schemes() {
                         Apply for This Scheme
                         <ArrowRight className="ml-2 h-4 w-4" />
                       </Button>
-                      <Button variant="outline">
-                        View Full Details
-                      </Button>
-                      <Button variant="outline">
-                        Compare
-                      </Button>
+                      <Button variant="outline">View Full Details</Button>
+                      <Button variant="outline">Compare</Button>
                     </div>
                   </CardContent>
                 </Card>
@@ -453,20 +523,20 @@ export default function Schemes() {
               Need Personalized Recommendations?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Our experts can help you identify the best schemes for your specific business
-              type, industry, and growth stage.
+              Our experts can help you identify the best schemes for your
+              specific business type, industry, and growth stage.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button 
-                size="lg" 
+              <Button
+                size="lg"
                 className="bg-techbiz-blue hover:bg-techbiz-blue/90"
               >
                 Get Expert Consultation
               </Button>
               <Link to="/business-types">
-                <Button 
-                  variant="outline" 
-                  size="lg" 
+                <Button
+                  variant="outline"
+                  size="lg"
                   className="border-white text-white hover:bg-white hover:text-techbiz-navy"
                 >
                   Start Business Journey

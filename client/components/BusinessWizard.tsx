@@ -1,13 +1,13 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { useState, useEffect } from "react";
-import { 
-  Sparkles, 
-  Wand2, 
-  Star, 
+import {
+  Sparkles,
+  Wand2,
+  Star,
   MessageCircle,
   ArrowRight,
-  X
+  X,
 } from "lucide-react";
 
 export default function BusinessWizard() {
@@ -20,7 +20,7 @@ export default function BusinessWizard() {
     "🚀 Startups with DPIIT recognition get 3 years of income tax exemption!",
     "⚡ GST registration can be completed online in just 3-5 days!",
     "🎯 Professional tax varies by state - Delhi has competitive rates!",
-    "🏆 Shop & Establishment license is mandatory for all commercial setups!"
+    "🏆 Shop & Establishment license is mandatory for all commercial setups!",
   ];
 
   useEffect(() => {
@@ -101,8 +101,12 @@ export default function BusinessWizard() {
                       <Wand2 className="h-6 w-6 text-foreground dark:text-white" />
                     </div>
                     <div>
-                      <h3 className="text-xl font-bold text-foreground dark:text-white">Your Business Wizard</h3>
-                      <p className="text-sm text-muted-foreground dark:text-gray-300">AI-powered guidance for your journey</p>
+                      <h3 className="text-xl font-bold text-foreground dark:text-white">
+                        Your Business Wizard
+                      </h3>
+                      <p className="text-sm text-muted-foreground dark:text-gray-300">
+                        AI-powered guidance for your journey
+                      </p>
                     </div>
                   </div>
                   <Button
@@ -130,13 +134,15 @@ export default function BusinessWizard() {
                         key={index}
                         className={`border transition-colors cursor-pointer ${
                           index === currentTip
-                            ? 'border-foreground/30 bg-muted dark:bg-white/20'
-                            : 'border-border hover:border-foreground/40 dark:border-gray-600 dark:hover:border-gray-400'
+                            ? "border-foreground/30 bg-muted dark:bg-white/20"
+                            : "border-border hover:border-foreground/40 dark:border-gray-600 dark:hover:border-gray-400"
                         }`}
                         onClick={() => setCurrentTip(index)}
                       >
                         <CardContent className="p-3">
-                          <p className="text-sm text-muted-foreground dark:text-gray-300">{tip}</p>
+                          <p className="text-sm text-muted-foreground dark:text-gray-300">
+                            {tip}
+                          </p>
                         </CardContent>
                       </Card>
                     ))}
@@ -166,9 +172,7 @@ export default function BusinessWizard() {
                       Check Scheme Eligibility
                     </Button>
 
-                    <Button
-                      className="w-full bg-foreground dark:bg-white text-background dark:text-black hover:opacity-90"
-                    >
+                    <Button className="w-full bg-foreground dark:bg-white text-background dark:text-black hover:opacity-90">
                       Start Business Journey
                       <ArrowRight className="ml-2 h-4 w-4" />
                     </Button>

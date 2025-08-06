@@ -1,19 +1,30 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+} from "@/components/ui/dialog";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { useState } from "react";
-import { 
-  Building2, 
-  Mail, 
-  Lock, 
-  User, 
+import {
+  Building2,
+  Mail,
+  Lock,
+  User,
   Phone,
   Eye,
   EyeOff,
-  Sparkles
+  Sparkles,
 } from "lucide-react";
 
 interface AuthModalProps {
@@ -22,7 +33,11 @@ interface AuthModalProps {
   defaultTab?: "login" | "signup";
 }
 
-export default function AuthModal({ isOpen, onClose, defaultTab = "login" }: AuthModalProps) {
+export default function AuthModal({
+  isOpen,
+  onClose,
+  defaultTab = "login",
+}: AuthModalProps) {
   const [showPassword, setShowPassword] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
 
@@ -30,7 +45,7 @@ export default function AuthModal({ isOpen, onClose, defaultTab = "login" }: Aut
     e.preventDefault();
     setIsLoading(true);
     // Simulate API call
-    await new Promise(resolve => setTimeout(resolve, 1000));
+    await new Promise((resolve) => setTimeout(resolve, 1000));
     setIsLoading(false);
     onClose();
   };
@@ -39,7 +54,6 @@ export default function AuthModal({ isOpen, onClose, defaultTab = "login" }: Aut
     <Dialog open={isOpen} onOpenChange={onClose}>
       <DialogContent className="sm:max-w-[450px] p-0 overflow-hidden bg-card border-techbiz-purple/20">
         <div className="relative">
-
           <DialogHeader className="p-6 pb-2">
             <DialogTitle className="flex items-center gap-3 text-2xl font-bold text-foreground">
               <div className="p-2 bg-techbiz-purple rounded-full">
@@ -76,7 +90,12 @@ export default function AuthModal({ isOpen, onClose, defaultTab = "login" }: Aut
                   <CardContent className="px-0 space-y-4">
                     <form onSubmit={handleSubmit} className="space-y-4">
                       <div className="space-y-2">
-                        <Label htmlFor="email" className="text-foreground font-medium">Email</Label>
+                        <Label
+                          htmlFor="email"
+                          className="text-foreground font-medium"
+                        >
+                          Email
+                        </Label>
                         <div className="relative">
                           <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-techbiz-purple" />
                           <Input
@@ -88,9 +107,14 @@ export default function AuthModal({ isOpen, onClose, defaultTab = "login" }: Aut
                           />
                         </div>
                       </div>
-                      
+
                       <div className="space-y-2">
-                        <Label htmlFor="password" className="text-foreground font-medium">Password</Label>
+                        <Label
+                          htmlFor="password"
+                          className="text-foreground font-medium"
+                        >
+                          Password
+                        </Label>
                         <div className="relative">
                           <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-techbiz-purple" />
                           <Input
@@ -133,7 +157,10 @@ export default function AuthModal({ isOpen, onClose, defaultTab = "login" }: Aut
                     </form>
 
                     <div className="text-center">
-                      <Button variant="link" className="text-techbiz-purple hover:text-techbiz-purple-light">
+                      <Button
+                        variant="link"
+                        className="text-techbiz-purple hover:text-techbiz-purple-light"
+                      >
                         Forgot your password?
                       </Button>
                     </div>
@@ -152,7 +179,12 @@ export default function AuthModal({ isOpen, onClose, defaultTab = "login" }: Aut
                     <form onSubmit={handleSubmit} className="space-y-4">
                       <div className="grid grid-cols-2 gap-4">
                         <div className="space-y-2">
-                          <Label htmlFor="firstName" className="text-foreground font-medium">First Name</Label>
+                          <Label
+                            htmlFor="firstName"
+                            className="text-foreground font-medium"
+                          >
+                            First Name
+                          </Label>
                           <div className="relative">
                             <User className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-techbiz-purple" />
                             <Input
@@ -165,7 +197,12 @@ export default function AuthModal({ isOpen, onClose, defaultTab = "login" }: Aut
                         </div>
 
                         <div className="space-y-2">
-                          <Label htmlFor="lastName" className="text-foreground font-medium">Last Name</Label>
+                          <Label
+                            htmlFor="lastName"
+                            className="text-foreground font-medium"
+                          >
+                            Last Name
+                          </Label>
                           <Input
                             id="lastName"
                             placeholder="Last name"
@@ -176,7 +213,12 @@ export default function AuthModal({ isOpen, onClose, defaultTab = "login" }: Aut
                       </div>
 
                       <div className="space-y-2">
-                        <Label htmlFor="signupEmail" className="text-foreground font-medium">Email</Label>
+                        <Label
+                          htmlFor="signupEmail"
+                          className="text-foreground font-medium"
+                        >
+                          Email
+                        </Label>
                         <div className="relative">
                           <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-techbiz-purple" />
                           <Input
@@ -190,7 +232,12 @@ export default function AuthModal({ isOpen, onClose, defaultTab = "login" }: Aut
                       </div>
 
                       <div className="space-y-2">
-                        <Label htmlFor="phone" className="text-foreground font-medium">Phone Number</Label>
+                        <Label
+                          htmlFor="phone"
+                          className="text-foreground font-medium"
+                        >
+                          Phone Number
+                        </Label>
                         <div className="relative">
                           <Phone className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-techbiz-purple" />
                           <Input
@@ -204,7 +251,12 @@ export default function AuthModal({ isOpen, onClose, defaultTab = "login" }: Aut
                       </div>
 
                       <div className="space-y-2">
-                        <Label htmlFor="signupPassword" className="text-foreground font-medium">Password</Label>
+                        <Label
+                          htmlFor="signupPassword"
+                          className="text-foreground font-medium"
+                        >
+                          Password
+                        </Label>
                         <div className="relative">
                           <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-techbiz-purple" />
                           <Input
@@ -248,11 +300,17 @@ export default function AuthModal({ isOpen, onClose, defaultTab = "login" }: Aut
 
                     <div className="text-center text-sm text-muted-foreground">
                       By signing up, you agree to our{" "}
-                      <Button variant="link" className="p-0 h-auto text-techbiz-purple hover:text-techbiz-purple-light">
+                      <Button
+                        variant="link"
+                        className="p-0 h-auto text-techbiz-purple hover:text-techbiz-purple-light"
+                      >
                         Terms of Service
                       </Button>{" "}
                       and{" "}
-                      <Button variant="link" className="p-0 h-auto text-techbiz-purple hover:text-techbiz-purple-light">
+                      <Button
+                        variant="link"
+                        className="p-0 h-auto text-techbiz-purple hover:text-techbiz-purple-light"
+                      >
                         Privacy Policy
                       </Button>
                     </div>

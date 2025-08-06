@@ -4,11 +4,11 @@ export default function Summary() {
   const features = [
     "Progress dashboard with visual timeline",
     "Downloadable compliance checklist",
-    "Personalized scheme recommendations", 
+    "Personalized scheme recommendations",
     "Document management system",
     "Integration with government portals",
     "Automated renewal reminders",
-    "Business growth analytics"
+    "Business growth analytics",
   ];
 
   return (

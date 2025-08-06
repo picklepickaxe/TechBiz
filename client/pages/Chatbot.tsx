@@ -8,7 +8,7 @@ export default function Chatbot() {
     "Document requirement assistance",
     "Compliance deadline reminders",
     "Multi-language support (Hindi, English)",
-    "Integration with live expert support"
+    "Integration with live expert support",
   ];
 
   return (

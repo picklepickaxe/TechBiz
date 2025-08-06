@@ -8,7 +8,7 @@ export default function Gamification() {
     "Progress rewards and incentives",
     "Leaderboard for business community",
     "Gamified compliance training",
-    "Social sharing of achievements"
+    "Social sharing of achievements",
   ];
 
   return (

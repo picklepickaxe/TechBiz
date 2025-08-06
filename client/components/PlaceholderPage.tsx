@@ -1,11 +1,17 @@
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 import { Link } from "react-router-dom";
-import { 
-  Building2, 
-  ArrowLeft, 
-  Construction, 
-  MessageSquare
+import {
+  Building2,
+  ArrowLeft,
+  Construction,
+  MessageSquare,
 } from "lucide-react";
 
 interface PlaceholderPageProps {
@@ -14,7 +20,11 @@ interface PlaceholderPageProps {
   features?: string[];
 }
 
-export default function PlaceholderPage({ title, description, features = [] }: PlaceholderPageProps) {
+export default function PlaceholderPage({
+  title,
+  description,
+  features = [],
+}: PlaceholderPageProps) {
   return (
     <div className="min-h-screen bg-background">
       {/* Navigation */}
@@ -23,7 +33,9 @@ export default function PlaceholderPage({ title, description, features = [] }: P
           <div className="flex justify-between items-center h-16">
             <Link to="/" className="flex items-center space-x-2">
               <Building2 className="h-8 w-8 text-techbiz-blue" />
-              <span className="text-2xl font-bold text-techbiz-navy">TechBiz</span>
+              <span className="text-2xl font-bold text-techbiz-navy">
+                TechBiz
+              </span>
             </Link>
             <div className="flex items-center space-x-4">
               <Link to="/">
@@ -35,9 +47,7 @@ export default function PlaceholderPage({ title, description, features = [] }: P
               <Button variant="outline" size="sm">
                 Log In
               </Button>
-              <Button size="sm">
-                Sign Up
-              </Button>
+              <Button size="sm">Sign Up</Button>
             </div>
           </div>
         </div>
@@ -62,10 +72,15 @@ export default function PlaceholderPage({ title, description, features = [] }: P
             <CardContent className="space-y-6">
               {features.length > 0 && (
                 <div className="text-left">
-                  <h3 className="font-semibold text-techbiz-navy mb-3">Planned Features:</h3>
+                  <h3 className="font-semibold text-techbiz-navy mb-3">
+                    Planned Features:
+                  </h3>
                   <ul className="space-y-2">
                     {features.map((feature, index) => (
-                      <li key={index} className="flex items-center text-techbiz-gray">
+                      <li
+                        key={index}
+                        className="flex items-center text-techbiz-gray"
+                      >
                         <span className="w-2 h-2 bg-techbiz-blue rounded-full mr-3"></span>
                         {feature}
                       </li>
@@ -77,19 +92,20 @@ export default function PlaceholderPage({ title, description, features = [] }: P
               <div className="bg-blue-50 rounded-lg p-6">
                 <div className="flex items-center gap-3 mb-3">
                   <MessageSquare className="h-5 w-5 text-techbiz-blue" />
-                  <h4 className="font-semibold text-techbiz-navy">Want this page developed?</h4>
+                  <h4 className="font-semibold text-techbiz-navy">
+                    Want this page developed?
+                  </h4>
                 </div>
                 <p className="text-sm text-techbiz-gray mb-4">
-                  Let us know you'd like this feature implemented and we'll prioritize its development.
+                  Let us know you'd like this feature implemented and we'll
+                  prioritize its development.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-3">
                   <Button className="bg-techbiz-blue hover:bg-techbiz-blue/90">
                     Request Feature
                   </Button>
                   <Link to="/">
-                    <Button variant="outline">
-                      Return to Homepage
-                    </Button>
+                    <Button variant="outline">Return to Homepage</Button>
                   </Link>
                 </div>
               </div>

@@ -1,24 +1,30 @@
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Progress } from "@/components/ui/progress";
 import { Link } from "react-router-dom";
 import { useState } from "react";
-import { 
-  Building2, 
-  FileText, 
-  Upload, 
-  Clock, 
-  CheckCircle, 
-  ArrowRight, 
+import {
+  Building2,
+  FileText,
+  Upload,
+  Clock,
+  CheckCircle,
+  ArrowRight,
   ChevronLeft,
   AlertCircle,
-  Download
+  Download,
 } from "lucide-react";
 
 export default function Compliance() {
   const [completedSteps, setCompletedSteps] = useState<number[]>([]);
-  
+
   const steps = [
     {
       id: 1,
@@ -26,31 +32,35 @@ export default function Compliance() {
       description: "Register your business entity with ROC",
       documents: ["PAN Card", "Aadhaar Card", "Address Proof"],
       estimatedTime: "5-7 days",
-      status: "pending"
+      status: "pending",
     },
     {
-      id: 2, 
+      id: 2,
       title: "Udyam Registration",
       description: "MSME registration for government benefits",
       documents: ["Business Registration Certificate", "Bank Details"],
       estimatedTime: "1-2 days",
-      status: "pending"
+      status: "pending",
     },
     {
       id: 3,
-      title: "GST Registration", 
+      title: "GST Registration",
       description: "Goods and Services Tax registration",
-      documents: ["Business Registration", "Bank Statement", "Rental Agreement"],
+      documents: [
+        "Business Registration",
+        "Bank Statement",
+        "Rental Agreement",
+      ],
       estimatedTime: "3-5 days",
-      status: "pending"
+      status: "pending",
     },
     {
       id: 4,
       title: "Professional Tax",
       description: "State-level professional tax registration",
       documents: ["GST Certificate", "Employee Details"],
-      estimatedTime: "2-3 days", 
-      status: "pending"
+      estimatedTime: "2-3 days",
+      status: "pending",
     },
     {
       id: 5,
@@ -58,7 +68,7 @@ export default function Compliance() {
       description: "Employee State Insurance and Provident Fund",
       documents: ["Employee List", "Salary Structure", "Office Address Proof"],
       estimatedTime: "7-10 days",
-      status: "pending"
+      status: "pending",
     },
     {
       id: 6,
@@ -66,8 +76,8 @@ export default function Compliance() {
       description: "License for commercial establishment",
       documents: ["Rental Agreement", "NOC from Owner", "Layout Plan"],
       estimatedTime: "10-15 days",
-      status: "pending"
-    }
+      status: "pending",
+    },
   ];
 
   const licenses = [
@@ -75,31 +85,31 @@ export default function Compliance() {
       name: "FSSAI License",
       required: "Food businesses",
       validity: "1-5 years",
-      status: "optional"
+      status: "optional",
     },
     {
       name: "Pollution Control Board",
-      required: "Manufacturing units", 
+      required: "Manufacturing units",
       validity: "5 years",
-      status: "conditional"
+      status: "conditional",
     },
     {
       name: "Fire Safety Certificate",
       required: "Commercial buildings",
       validity: "1 year",
-      status: "conditional"
+      status: "conditional",
     },
     {
       name: "Import Export Code",
       required: "International trade",
       validity: "Lifetime",
-      status: "optional"
-    }
+      status: "optional",
+    },
   ];
 
   const toggleStepCompletion = (stepId: number) => {
     if (completedSteps.includes(stepId)) {
-      setCompletedSteps(completedSteps.filter(id => id !== stepId));
+      setCompletedSteps(completedSteps.filter((id) => id !== stepId));
     } else {
       setCompletedSteps([...completedSteps, stepId]);
     }
@@ -115,7 +125,9 @@ export default function Compliance() {
           <div className="flex justify-between items-center h-16">
             <Link to="/" className="flex items-center space-x-2">
               <Building2 className="h-8 w-8 text-techbiz-blue" />
-              <span className="text-2xl font-bold text-techbiz-navy">TechBiz</span>
+              <span className="text-2xl font-bold text-techbiz-navy">
+                TechBiz
+              </span>
             </Link>
             <div className="flex items-center space-x-4">
               <Link to="/business-types">
@@ -127,9 +139,7 @@ export default function Compliance() {
               <Button variant="outline" size="sm">
                 Log In
               </Button>
-              <Button size="sm">
-                Sign Up
-              </Button>
+              <Button size="sm">Sign Up</Button>
             </div>
           </div>
         </div>
@@ -143,17 +153,22 @@ export default function Compliance() {
               License & Compliance Journey
             </h1>
             <p className="text-xl text-blue-100 mb-8">
-              Follow this step-by-step guide to ensure your business is fully compliant
-              with all regulatory requirements in Delhi.
+              Follow this step-by-step guide to ensure your business is fully
+              compliant with all regulatory requirements in Delhi.
             </p>
-            
+
             {/* Progress Overview */}
             <div className="bg-white/10 rounded-lg p-6">
               <div className="flex justify-between items-center mb-4">
                 <span className="text-lg font-semibold">Overall Progress</span>
-                <span className="text-lg">{completedSteps.length} of {steps.length} completed</span>
+                <span className="text-lg">
+                  {completedSteps.length} of {steps.length} completed
+                </span>
               </div>
-              <Progress value={progressPercentage} className="h-3 bg-white/20" />
+              <Progress
+                value={progressPercentage}
+                className="h-3 bg-white/20"
+              />
             </div>
           </div>
         </div>
@@ -171,23 +186,33 @@ export default function Compliance() {
               {steps.map((step, index) => {
                 const isCompleted = completedSteps.includes(step.id);
                 const isNext = !isCompleted && completedSteps.length === index;
-                
+
                 return (
-                  <Card 
-                    key={step.id} 
+                  <Card
+                    key={step.id}
                     className={`relative border-2 transition-all ${
-                      isCompleted 
-                        ? 'border-techbiz-green bg-green-50' 
+                      isCompleted
+                        ? "border-techbiz-green bg-green-50"
                         : isNext
-                        ? 'border-techbiz-blue bg-blue-50'
-                        : 'border-gray-200'
+                          ? "border-techbiz-blue bg-blue-50"
+                          : "border-gray-200"
                     }`}
                   >
                     {/* Step Number */}
-                    <div className={`absolute -left-4 top-6 w-8 h-8 rounded-full flex items-center justify-center text-white font-bold ${
-                      isCompleted ? 'bg-techbiz-green' : isNext ? 'bg-techbiz-blue' : 'bg-gray-400'
-                    }`}>
-                      {isCompleted ? <CheckCircle className="h-5 w-5" /> : step.id}
+                    <div
+                      className={`absolute -left-4 top-6 w-8 h-8 rounded-full flex items-center justify-center text-white font-bold ${
+                        isCompleted
+                          ? "bg-techbiz-green"
+                          : isNext
+                            ? "bg-techbiz-blue"
+                            : "bg-gray-400"
+                      }`}
+                    >
+                      {isCompleted ? (
+                        <CheckCircle className="h-5 w-5" />
+                      ) : (
+                        step.id
+                      )}
                     </div>
 
                     <CardHeader className="ml-8">
@@ -201,7 +226,15 @@ export default function Compliance() {
                           </CardDescription>
                         </div>
                         <div className="text-right">
-                          <Badge variant={isCompleted ? "default" : isNext ? "secondary" : "outline"}>
+                          <Badge
+                            variant={
+                              isCompleted
+                                ? "default"
+                                : isNext
+                                  ? "secondary"
+                                  : "outline"
+                            }
+                          >
                             <Clock className="h-3 w-3 mr-1" />
                             {step.estimatedTime}
                           </Badge>
@@ -212,10 +245,16 @@ export default function Compliance() {
                     <CardContent className="ml-8 space-y-4">
                       {/* Required Documents */}
                       <div>
-                        <h4 className="font-semibold text-techbiz-navy mb-2">Required Documents:</h4>
+                        <h4 className="font-semibold text-techbiz-navy mb-2">
+                          Required Documents:
+                        </h4>
                         <div className="flex flex-wrap gap-2">
                           {step.documents.map((doc, docIndex) => (
-                            <Badge key={docIndex} variant="outline" className="text-xs">
+                            <Badge
+                              key={docIndex}
+                              variant="outline"
+                              className="text-xs"
+                            >
                               <FileText className="h-3 w-3 mr-1" />
                               {doc}
                             </Badge>
@@ -227,7 +266,7 @@ export default function Compliance() {
                       <div className="flex flex-wrap gap-3 pt-4">
                         {!isCompleted ? (
                           <>
-                            <Button 
+                            <Button
                               size="sm"
                               className="bg-techbiz-blue hover:bg-techbiz-blue/90"
                               onClick={() => toggleStepCompletion(step.id)}
@@ -241,8 +280,8 @@ export default function Compliance() {
                           </>
                         ) : (
                           <>
-                            <Button 
-                              variant="outline" 
+                            <Button
+                              variant="outline"
                               size="sm"
                               className="border-techbiz-green text-techbiz-green"
                             >
@@ -272,7 +311,7 @@ export default function Compliance() {
             <h2 className="text-3xl font-bold text-techbiz-navy mb-8 text-center">
               Additional Licenses (Based on Business Type)
             </h2>
-            
+
             <div className="grid md:grid-cols-2 gap-6">
               {licenses.map((license, index) => (
                 <Card key={index} className="border-0 shadow-lg">
@@ -281,9 +320,17 @@ export default function Compliance() {
                       <CardTitle className="text-lg text-techbiz-navy">
                         {license.name}
                       </CardTitle>
-                      <Badge 
-                        variant={license.status === 'optional' ? 'secondary' : 'outline'}
-                        className={license.status === 'conditional' ? 'border-orange-500 text-orange-600' : ''}
+                      <Badge
+                        variant={
+                          license.status === "optional"
+                            ? "secondary"
+                            : "outline"
+                        }
+                        className={
+                          license.status === "conditional"
+                            ? "border-orange-500 text-orange-600"
+                            : ""
+                        }
                       >
                         {license.status}
                       </Badge>
@@ -298,9 +345,9 @@ export default function Compliance() {
                         <strong>Validity:</strong> {license.validity}
                       </p>
                     </div>
-                    <Button 
-                      variant="outline" 
-                      size="sm" 
+                    <Button
+                      variant="outline"
+                      size="sm"
                       className="mt-4 border-techbiz-blue text-techbiz-blue hover:bg-techbiz-blue hover:text-white"
                     >
                       Learn More
@@ -317,18 +364,16 @@ export default function Compliance() {
       <section className="py-16 bg-techbiz-blue text-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl font-bold mb-6">
-              Complete Your Journey
-            </h2>
+            <h2 className="text-3xl font-bold mb-6">Complete Your Journey</h2>
             <p className="text-xl text-blue-100 mb-8">
-              Once you've completed the compliance steps, explore government schemes
-              and growth opportunities for your business.
+              Once you've completed the compliance steps, explore government
+              schemes and growth opportunities for your business.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link to="/schemes">
-                <Button 
-                  variant="secondary" 
-                  size="lg" 
+                <Button
+                  variant="secondary"
+                  size="lg"
                   className="bg-white text-techbiz-blue hover:bg-gray-100"
                 >
                   Explore Government Schemes
@@ -336,9 +381,9 @@ export default function Compliance() {
                 </Button>
               </Link>
               <Link to="/summary">
-                <Button 
-                  variant="outline" 
-                  size="lg" 
+                <Button
+                  variant="outline"
+                  size="lg"
                   className="border-white text-white hover:bg-white hover:text-techbiz-blue"
                 >
                   View Progress Summary

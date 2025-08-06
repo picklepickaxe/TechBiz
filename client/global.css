@@ -120,7 +120,8 @@
 @layer utilities {
   /* Floating animations */
   @keyframes float {
-    0%, 100% {
+    0%,
+    100% {
       transform: translateY(0px);
     }
     50% {
@@ -129,7 +130,8 @@
   }
 
   @keyframes floatReverse {
-    0%, 100% {
+    0%,
+    100% {
       transform: translateY(0px);
     }
     50% {
@@ -138,16 +140,20 @@
   }
 
   @keyframes pulse-glow {
-    0%, 100% {
+    0%,
+    100% {
       box-shadow: 0 0 5px rgba(37, 99, 235, 0.5);
     }
     50% {
-      box-shadow: 0 0 20px rgba(37, 99, 235, 0.8), 0 0 30px rgba(37, 99, 235, 0.6);
+      box-shadow:
+        0 0 20px rgba(37, 99, 235, 0.8),
+        0 0 30px rgba(37, 99, 235, 0.6);
     }
   }
 
   @keyframes gradient-shift {
-    0%, 100% {
+    0%,
+    100% {
       background-position: 0% 50%;
     }
     50% {
@@ -156,7 +162,8 @@
   }
 
   @keyframes sparkle {
-    0%, 100% {
+    0%,
+    100% {
       opacity: 0;
       transform: scale(0);
     }
@@ -210,7 +217,8 @@
 
   /* Wizard specific animations */
   @keyframes wizard-float {
-    0%, 100% {
+    0%,
+    100% {
       transform: translateY(0px) rotate(0deg);
     }
     25% {
@@ -222,7 +230,8 @@
   }
 
   @keyframes magic-sparkle {
-    0%, 100% {
+    0%,
+    100% {
       opacity: 0;
       transform: translateY(0px) scale(0);
     }
