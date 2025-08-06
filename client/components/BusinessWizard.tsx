@@ -50,23 +50,23 @@ export default function BusinessWizard() {
 
           {/* Floating tip bubble */}
           <div className="absolute bottom-full right-0 mb-4 w-80 max-w-[calc(100vw-3rem)] -translate-x-4">
-            <Card className="shadow-xl" style={{ backgroundColor: '#fcd2f1', borderColor: '#fcd2f1' }}>
+            <Card className="shadow-xl bg-background dark:bg-[#696669] border-border dark:border-[#696669]">
               <CardContent className="p-4">
                 <div className="flex items-start gap-3">
-                  <div className="p-2 bg-white/30 rounded-full">
-                    <Sparkles className="h-4 w-4" style={{ color: '#000' }} />
+                  <div className="p-2 bg-muted dark:bg-white/20 rounded-full">
+                    <Sparkles className="h-4 w-4 text-foreground dark:text-white" />
                   </div>
                   <div className="flex-1">
-                    <p className="text-sm font-medium mb-1" style={{ color: '#000' }}>
+                    <p className="text-sm font-medium mb-1 text-foreground dark:text-white">
                       Wizard Tip #{currentTip + 1}
                     </p>
-                    <p className="text-sm" style={{ color: '#333' }}>
+                    <p className="text-sm text-muted-foreground dark:text-gray-300">
                       {wizardTips[currentTip]}
                     </p>
                   </div>
                 </div>
                 {/* Speech bubble arrow */}
-                <div className="absolute bottom-0 right-8 transform translate-y-1/2 rotate-45 w-3 h-3" style={{ backgroundColor: '#fcd2f1' }}></div>
+                <div className="absolute bottom-0 right-8 transform translate-y-1/2 rotate-45 w-3 h-3 bg-background dark:bg-[#696669]"></div>
               </CardContent>
             </Card>
           </div>
