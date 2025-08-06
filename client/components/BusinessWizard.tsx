@@ -77,25 +77,26 @@ export default function BusinessWizard() {
       {/* Expanded Wizard Panel */}
       {isExpanded && (
         <div className="fixed inset-0 z-50 bg-black/50 backdrop-blur-sm">
-          <div className="fixed bottom-0 right-0 w-full max-w-md h-[500px] bg-card shadow-2xl">
+          <div className="fixed bottom-0 right-0 w-full max-w-md h-[500px] shadow-2xl m-4 rounded-lg overflow-hidden" style={{ backgroundColor: '#fcd2f1' }}>
             <div className="h-full flex flex-col">
               {/* Header */}
-              <div className="bg-techbiz-purple p-6 text-primary-foreground">
+              <div className="p-6" style={{ backgroundColor: '#fcd2f1' }}>
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-3">
-                    <div className="p-3 bg-primary-foreground/20 rounded-full">
-                      <Wand2 className="h-6 w-6" />
+                    <div className="p-3 bg-white/30 rounded-full">
+                      <Wand2 className="h-6 w-6" style={{ color: '#000' }} />
                     </div>
                     <div>
-                      <h3 className="text-xl font-bold">Your Business Wizard</h3>
-                      <p className="text-primary-foreground/80 text-sm">AI-powered guidance for your journey</p>
+                      <h3 className="text-xl font-bold" style={{ color: '#000' }}>Your Business Wizard</h3>
+                      <p className="text-sm" style={{ color: '#333' }}>AI-powered guidance for your journey</p>
                     </div>
                   </div>
                   <Button
                     variant="ghost"
                     size="sm"
                     onClick={() => setIsExpanded(false)}
-                    className="text-primary-foreground hover:bg-primary-foreground/20 p-2"
+                    className="p-2 hover:bg-white/20"
+                    style={{ color: '#000' }}
                   >
                     <X className="h-5 w-5" />
                   </Button>
