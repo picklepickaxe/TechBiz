@@ -76,26 +76,25 @@ export default function BusinessWizard() {
       {/* Expanded Wizard Panel */}
       {isExpanded && (
         <div className="fixed inset-0 z-50 bg-black/50 backdrop-blur-sm">
-          <div className="fixed bottom-4 right-4 w-full max-w-md max-h-[calc(100vh-2rem)] h-[500px] shadow-2xl rounded-lg overflow-hidden" style={{ backgroundColor: '#fcd2f1' }}>
+          <div className="fixed bottom-4 right-4 w-full max-w-md max-h-[calc(100vh-2rem)] h-[500px] shadow-2xl rounded-lg overflow-hidden bg-background dark:bg-[#696669]">
             <div className="h-full flex flex-col">
               {/* Header */}
-              <div className="p-6" style={{ backgroundColor: '#fcd2f1' }}>
+              <div className="p-6 bg-background dark:bg-[#696669]">
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-3">
-                    <div className="p-3 bg-white/30 rounded-full">
-                      <Wand2 className="h-6 w-6" style={{ color: '#000' }} />
+                    <div className="p-3 bg-muted dark:bg-white/20 rounded-full">
+                      <Wand2 className="h-6 w-6 text-foreground dark:text-white" />
                     </div>
                     <div>
-                      <h3 className="text-xl font-bold" style={{ color: '#000' }}>Your Business Wizard</h3>
-                      <p className="text-sm" style={{ color: '#333' }}>AI-powered guidance for your journey</p>
+                      <h3 className="text-xl font-bold text-foreground dark:text-white">Your Business Wizard</h3>
+                      <p className="text-sm text-muted-foreground dark:text-gray-300">AI-powered guidance for your journey</p>
                     </div>
                   </div>
                   <Button
                     variant="ghost"
                     size="sm"
                     onClick={() => setIsExpanded(false)}
-                    className="p-2 hover:bg-white/20"
-                    style={{ color: '#000' }}
+                    className="p-2 hover:bg-muted dark:hover:bg-white/20 text-foreground dark:text-white"
                   >
                     <X className="h-5 w-5" />
                   </Button>
