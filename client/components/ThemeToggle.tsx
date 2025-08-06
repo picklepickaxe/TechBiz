@@ -34,20 +34,28 @@ export default function ThemeToggle() {
       variant="outline"
       size="sm"
       onClick={toggleTheme}
-      className="border-techbiz-purple/30 hover:border-techbiz-purple hover:bg-techbiz-purple/10 transition-colors"
+      className="border-techbiz-purple/30 hover:border-techbiz-purple hover:bg-techbiz-purple/10 transition-colors relative overflow-hidden"
     >
       <div className="flex items-center gap-2">
-        {isDark ? (
-          <>
-            <Sun className="h-4 w-4 text-techbiz-purple" />
-            <span className="text-sm font-medium">Light</span>
-          </>
-        ) : (
-          <>
-            <Moon className="h-4 w-4 text-techbiz-purple" />
-            <span className="text-sm font-medium">Dark</span>
-          </>
-        )}
+        <div className="relative w-4 h-4">
+          <Sun
+            className={`h-4 w-4 text-techbiz-purple absolute inset-0 transition-all duration-500 ${
+              isDark
+                ? 'opacity-100 rotate-0 scale-100'
+                : 'opacity-0 rotate-180 scale-0'
+            }`}
+          />
+          <Moon
+            className={`h-4 w-4 text-techbiz-purple absolute inset-0 transition-all duration-500 ${
+              isDark
+                ? 'opacity-0 -rotate-180 scale-0'
+                : 'opacity-100 rotate-0 scale-100'
+            }`}
+          />
+        </div>
+        <span className="text-sm font-medium">
+          {isDark ? 'Light' : 'Dark'}
+        </span>
       </div>
     </Button>
   );
