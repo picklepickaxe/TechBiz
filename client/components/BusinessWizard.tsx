@@ -106,24 +106,25 @@ export default function BusinessWizard() {
               {/* Content */}
               <div className="flex-1 p-6 space-y-4 overflow-y-auto">
                 <div className="space-y-4">
-                  <h4 className="font-semibold text-foreground flex items-center gap-2">
-                    <Star className="h-4 w-4 text-techbiz-purple" />
+                  <h4 className="font-semibold flex items-center gap-2" style={{ color: '#000' }}>
+                    <Star className="h-4 w-4" style={{ color: '#333' }} />
                     Quick Business Insights
                   </h4>
-                  
+
                   <div className="space-y-3">
                     {wizardTips.map((tip, index) => (
                       <Card
                         key={index}
                         className={`border transition-colors cursor-pointer ${
                           index === currentTip
-                            ? 'border-techbiz-purple bg-techbiz-purple/5'
-                            : 'border-border hover:border-techbiz-purple/50'
+                            ? 'border-black/30 bg-white/30'
+                            : 'border-black/20 hover:border-black/40'
                         }`}
                         onClick={() => setCurrentTip(index)}
+                        style={{ backgroundColor: index === currentTip ? 'rgba(255,255,255,0.3)' : 'rgba(255,255,255,0.1)' }}
                       >
                         <CardContent className="p-3">
-                          <p className="text-sm text-muted-foreground">{tip}</p>
+                          <p className="text-sm" style={{ color: '#333' }}>{tip}</p>
                         </CardContent>
                       </Card>
                     ))}
