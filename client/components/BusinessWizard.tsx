@@ -52,8 +52,8 @@ export default function BusinessWizard() {
             </div>
           </Button>
 
-          {/* Floating tip bubble */}
-          {showTip && (
+          {/* Floating tip bubble - only show when wizard is not expanded */}
+          {showTip && !isExpanded && (
             <div className="absolute bottom-full right-0 mb-4 w-80 max-w-[calc(100vw-3rem)] -translate-x-4">
               <Card className="shadow-xl bg-background dark:bg-[#696669] border-border dark:border-[#696669] relative">
                 <CardContent className="p-4 pr-10">
