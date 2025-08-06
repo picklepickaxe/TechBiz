@@ -131,31 +131,34 @@ export default function BusinessWizard() {
                   </div>
                 </div>
 
-                <div className="border-t pt-4">
-                  <h4 className="font-semibold text-foreground mb-3 flex items-center gap-2">
-                    <MessageCircle className="h-4 w-4 text-techbiz-purple" />
+                <div className="border-t border-black/20 pt-4">
+                  <h4 className="font-semibold mb-3 flex items-center gap-2" style={{ color: '#000' }}>
+                    <MessageCircle className="h-4 w-4" style={{ color: '#333' }} />
                     Quick Actions
                   </h4>
-                  
+
                   <div className="space-y-2">
                     <Button
                       variant="outline"
-                      className="w-full justify-start border-techbiz-purple/30 hover:bg-techbiz-purple/10 text-muted-foreground"
+                      className="w-full justify-start border-black/30 hover:bg-white/20"
+                      style={{ color: '#333', borderColor: 'rgba(0,0,0,0.3)' }}
                     >
-                      <Sparkles className="mr-2 h-4 w-4 text-techbiz-purple" />
+                      <Sparkles className="mr-2 h-4 w-4" style={{ color: '#333' }} />
                       Find My Perfect Business Type
                     </Button>
 
                     <Button
                       variant="outline"
-                      className="w-full justify-start border-techbiz-purple/30 hover:bg-techbiz-purple/10 text-muted-foreground"
+                      className="w-full justify-start border-black/30 hover:bg-white/20"
+                      style={{ color: '#333', borderColor: 'rgba(0,0,0,0.3)' }}
                     >
-                      <Wand2 className="mr-2 h-4 w-4 text-techbiz-purple" />
+                      <Wand2 className="mr-2 h-4 w-4" style={{ color: '#333' }} />
                       Check Scheme Eligibility
                     </Button>
 
                     <Button
-                      className="w-full bg-techbiz-purple hover:bg-techbiz-purple/90 text-primary-foreground"
+                      className="w-full hover:opacity-90"
+                      style={{ backgroundColor: '#000', color: '#fff' }}
                     >
                       Start Business Journey
                       <ArrowRight className="ml-2 h-4 w-4" />
