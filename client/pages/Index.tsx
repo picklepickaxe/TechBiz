@@ -257,9 +257,9 @@ export default function Index() {
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               {businessTypes.map((type, index) => (
                 <Link key={index} to="/business-types">
-                  <Card className="border-techbiz-purple/30 bg-techbiz-black/50 hover:bg-techbiz-black/70 transition-colors cursor-pointer">
+                  <Card className="border-techbiz-purple/30 bg-card/80 hover:bg-card/90 transition-all duration-300 cursor-pointer hover:scale-105 hover:shadow-lg hover:border-techbiz-purple/60">
                     <CardHeader className="text-center py-8">
-                      <CardTitle className="text-techbiz-white text-base md:text-lg">
+                      <CardTitle className="text-foreground text-base md:text-lg">
                         {type}
                       </CardTitle>
                     </CardHeader>
