@@ -128,14 +128,14 @@ export default function Index() {
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
               <Link to="/business-types">
-                <Button size="lg" className="bg-techbiz-purple hover:bg-techbiz-purple/90 text-primary-foreground px-8 py-6 text-lg">
+                <Button size="lg" className="bg-techbiz-purple hover:bg-techbiz-purple/90 text-primary-foreground px-8 py-6 text-lg transition-all duration-300 hover:scale-105 hover:shadow-lg">
                   Start Your Business Journey
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
               </Link>
 
               <Link to="/schemes">
-                <Button variant="outline" size="lg" className="border-techbiz-purple text-techbiz-purple hover:bg-techbiz-purple hover:text-primary-foreground px-8 py-6 text-lg">
+                <Button variant="outline" size="lg" className="border-techbiz-purple text-techbiz-purple hover:bg-techbiz-purple hover:text-primary-foreground px-8 py-6 text-lg transition-all duration-300 hover:scale-105 hover:shadow-lg">
                   Compare Schemes
                 </Button>
               </Link>
