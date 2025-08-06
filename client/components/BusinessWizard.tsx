@@ -37,7 +37,8 @@ export default function BusinessWizard() {
         <div className="fixed bottom-6 right-6 z-50">
           <Button
             onClick={() => setIsExpanded(true)}
-            className="bg-techbiz-purple hover:bg-techbiz-purple/90 text-primary-foreground p-4 rounded-full shadow-lg"
+            className="p-4 rounded-full shadow-lg"
+            style={{ backgroundColor: '#fcd2f1', color: '#000' }}
           >
             <div className="flex items-center gap-3">
               <Wand2 className="h-6 w-6" />
