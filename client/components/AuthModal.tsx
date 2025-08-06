@@ -144,7 +144,7 @@ export default function AuthModal({ isOpen, onClose, defaultTab = "login" }: Aut
               <TabsContent value="signup" className="space-y-4">
                 <Card className="border-0 shadow-none bg-transparent">
                   <CardHeader className="px-0 pb-4">
-                    <CardDescription className="text-center text-techbiz-grey">
+                    <CardDescription className="text-center text-muted-foreground">
                       Start your business journey with TechBiz today
                     </CardDescription>
                   </CardHeader>
@@ -152,66 +152,66 @@ export default function AuthModal({ isOpen, onClose, defaultTab = "login" }: Aut
                     <form onSubmit={handleSubmit} className="space-y-4">
                       <div className="grid grid-cols-2 gap-4">
                         <div className="space-y-2">
-                          <Label htmlFor="firstName" className="text-techbiz-white font-medium">First Name</Label>
+                          <Label htmlFor="firstName" className="text-foreground font-medium">First Name</Label>
                           <div className="relative">
                             <User className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-techbiz-purple" />
                             <Input
                               id="firstName"
                               placeholder="First name"
-                              className="pl-10 border-techbiz-purple/30 focus:border-techbiz-purple bg-techbiz-black text-techbiz-white"
+                              className="pl-10 border-techbiz-purple/30 focus:border-techbiz-purple"
                               required
                             />
                           </div>
                         </div>
 
                         <div className="space-y-2">
-                          <Label htmlFor="lastName" className="text-techbiz-white font-medium">Last Name</Label>
+                          <Label htmlFor="lastName" className="text-foreground font-medium">Last Name</Label>
                           <Input
                             id="lastName"
                             placeholder="Last name"
-                            className="border-techbiz-purple/30 focus:border-techbiz-purple bg-techbiz-black text-techbiz-white"
+                            className="border-techbiz-purple/30 focus:border-techbiz-purple"
                             required
                           />
                         </div>
                       </div>
 
                       <div className="space-y-2">
-                        <Label htmlFor="signupEmail" className="text-techbiz-white font-medium">Email</Label>
+                        <Label htmlFor="signupEmail" className="text-foreground font-medium">Email</Label>
                         <div className="relative">
                           <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-techbiz-purple" />
                           <Input
                             id="signupEmail"
                             type="email"
                             placeholder="Enter your email"
-                            className="pl-10 border-techbiz-purple/30 focus:border-techbiz-purple bg-techbiz-black text-techbiz-white"
+                            className="pl-10 border-techbiz-purple/30 focus:border-techbiz-purple"
                             required
                           />
                         </div>
                       </div>
 
                       <div className="space-y-2">
-                        <Label htmlFor="phone" className="text-techbiz-white font-medium">Phone Number</Label>
+                        <Label htmlFor="phone" className="text-foreground font-medium">Phone Number</Label>
                         <div className="relative">
                           <Phone className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-techbiz-purple" />
                           <Input
                             id="phone"
                             type="tel"
                             placeholder="Enter your phone number"
-                            className="pl-10 border-techbiz-purple/30 focus:border-techbiz-purple bg-techbiz-black text-techbiz-white"
+                            className="pl-10 border-techbiz-purple/30 focus:border-techbiz-purple"
                             required
                           />
                         </div>
                       </div>
 
                       <div className="space-y-2">
-                        <Label htmlFor="signupPassword" className="text-techbiz-white font-medium">Password</Label>
+                        <Label htmlFor="signupPassword" className="text-foreground font-medium">Password</Label>
                         <div className="relative">
                           <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-techbiz-purple" />
                           <Input
                             id="signupPassword"
                             type={showPassword ? "text" : "password"}
                             placeholder="Create a password"
-                            className="pl-10 pr-10 border-techbiz-purple/30 focus:border-techbiz-purple bg-techbiz-black text-techbiz-white"
+                            className="pl-10 pr-10 border-techbiz-purple/30 focus:border-techbiz-purple"
                             required
                           />
                           <Button
@@ -232,12 +232,12 @@ export default function AuthModal({ isOpen, onClose, defaultTab = "login" }: Aut
 
                       <Button
                         type="submit"
-                        className="w-full bg-techbiz-purple hover:bg-techbiz-purple/90 text-techbiz-black font-medium py-6"
+                        className="w-full bg-techbiz-purple hover:bg-techbiz-purple/90 text-primary-foreground font-medium py-6"
                         disabled={isLoading}
                       >
                         {isLoading ? (
                           <div className="flex items-center gap-2">
-                            <div className="w-4 h-4 border-2 border-techbiz-black/30 border-t-techbiz-black rounded-full animate-spin"></div>
+                            <div className="w-4 h-4 border-2 border-primary-foreground/30 border-t-primary-foreground rounded-full animate-spin"></div>
                             Creating Account...
                           </div>
                         ) : (
@@ -246,7 +246,7 @@ export default function AuthModal({ isOpen, onClose, defaultTab = "login" }: Aut
                       </Button>
                     </form>
 
-                    <div className="text-center text-sm text-techbiz-grey">
+                    <div className="text-center text-sm text-muted-foreground">
                       By signing up, you agree to our{" "}
                       <Button variant="link" className="p-0 h-auto text-techbiz-purple hover:text-techbiz-purple-light">
                         Terms of Service
