@@ -18,7 +18,7 @@ export default function BusinessWizard() {
     "💡 Did you know? MSME registration gives you access to 200+ government schemes!",
     "🚀 Startups with DPIIT recognition get 3 years of income tax exemption!",
     "⚡ GST registration can be completed online in just 3-5 days!",
-    "🎯 Professional tax varies by state - Delhi has competitive rates!",
+    "���� Professional tax varies by state - Delhi has competitive rates!",
     "🏆 Shop & Establishment license is mandatory for all commercial setups!"
   ];
 
@@ -104,8 +104,8 @@ export default function BusinessWizard() {
               {/* Content */}
               <div className="flex-1 p-6 space-y-4 overflow-y-auto">
                 <div className="space-y-4">
-                  <h4 className="font-semibold flex items-center gap-2" style={{ color: '#000' }}>
-                    <Star className="h-4 w-4" style={{ color: '#333' }} />
+                  <h4 className="font-semibold flex items-center gap-2 text-foreground dark:text-white">
+                    <Star className="h-4 w-4 text-muted-foreground dark:text-gray-300" />
                     Quick Business Insights
                   </h4>
 
@@ -115,14 +115,13 @@ export default function BusinessWizard() {
                         key={index}
                         className={`border transition-colors cursor-pointer ${
                           index === currentTip
-                            ? 'border-black/30 bg-white/30'
-                            : 'border-black/20 hover:border-black/40'
+                            ? 'border-foreground/30 bg-muted dark:bg-white/20'
+                            : 'border-border hover:border-foreground/40 dark:border-gray-600 dark:hover:border-gray-400'
                         }`}
                         onClick={() => setCurrentTip(index)}
-                        style={{ backgroundColor: index === currentTip ? 'rgba(255,255,255,0.3)' : 'rgba(255,255,255,0.1)' }}
                       >
                         <CardContent className="p-3">
-                          <p className="text-sm" style={{ color: '#333' }}>{tip}</p>
+                          <p className="text-sm text-muted-foreground dark:text-gray-300">{tip}</p>
                         </CardContent>
                       </Card>
                     ))}
