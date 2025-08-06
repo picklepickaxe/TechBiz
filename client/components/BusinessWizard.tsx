@@ -50,27 +50,38 @@ export default function BusinessWizard() {
           </Button>
 
           {/* Floating tip bubble */}
-          <div className="absolute bottom-full right-0 mb-4 w-80 max-w-[calc(100vw-3rem)] -translate-x-4">
-            <Card className="shadow-xl bg-background dark:bg-[#696669] border-border dark:border-[#696669]">
-              <CardContent className="p-4">
-                <div className="flex items-start gap-3">
-                  <div className="p-2 bg-muted dark:bg-white/20 rounded-full">
-                    <Sparkles className="h-4 w-4 text-foreground dark:text-white" />
+          {showTip && (
+            <div className="absolute bottom-full right-0 mb-4 w-80 max-w-[calc(100vw-3rem)] -translate-x-4">
+              <Card className="shadow-xl bg-background dark:bg-[#696669] border-border dark:border-[#696669] relative">
+                <CardContent className="p-4 pr-10">
+                  <div className="flex items-start gap-3">
+                    <div className="p-2 bg-muted dark:bg-white/20 rounded-full">
+                      <Sparkles className="h-4 w-4 text-foreground dark:text-white" />
+                    </div>
+                    <div className="flex-1">
+                      <p className="text-sm font-medium mb-1 text-foreground dark:text-white">
+                        Wizard Tip #{currentTip + 1}
+                      </p>
+                      <p className="text-sm text-muted-foreground dark:text-gray-300">
+                        {wizardTips[currentTip]}
+                      </p>
+                    </div>
                   </div>
-                  <div className="flex-1">
-                    <p className="text-sm font-medium mb-1 text-foreground dark:text-white">
-                      Wizard Tip #{currentTip + 1}
-                    </p>
-                    <p className="text-sm text-muted-foreground dark:text-gray-300">
-                      {wizardTips[currentTip]}
-                    </p>
-                  </div>
-                </div>
-                {/* Speech bubble arrow */}
-                <div className="absolute bottom-0 right-8 transform translate-y-1/2 rotate-45 w-3 h-3 bg-background dark:bg-[#696669]"></div>
-              </CardContent>
-            </Card>
-          </div>
+                  {/* Close button */}
+                  <Button
+                    variant="ghost"
+                    size="sm"
+                    onClick={() => setShowTip(false)}
+                    className="absolute top-2 right-2 h-6 w-6 p-0 hover:bg-muted dark:hover:bg-white/20 text-muted-foreground dark:text-gray-300 hover:text-foreground dark:hover:text-white"
+                  >
+                    <X className="h-3 w-3" />
+                  </Button>
+                  {/* Speech bubble arrow */}
+                  <div className="absolute bottom-0 right-8 transform translate-y-1/2 rotate-45 w-3 h-3 bg-background dark:bg-[#696669]"></div>
+                </CardContent>
+              </Card>
+            </div>
+          )}
         </div>
       )}
 
