@@ -37,8 +37,7 @@ export default function BusinessWizard() {
         <div className="fixed bottom-6 right-6 z-50 max-w-[calc(100vw-3rem)]">
           <Button
             onClick={() => setIsExpanded(true)}
-            className="p-4 rounded-full shadow-lg"
-            style={{ backgroundColor: '#fcd2f1', color: '#000' }}
+            className="p-4 rounded-full shadow-lg bg-background dark:bg-[#696669] text-foreground dark:text-white border-2 border-border dark:border-[#696669]"
           >
             <div className="flex items-center gap-3">
               <Wand2 className="h-6 w-6" />
