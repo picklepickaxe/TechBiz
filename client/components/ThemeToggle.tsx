@@ -40,12 +40,12 @@ export default function ThemeToggle() {
         {isDark ? (
           <>
             <Sun className="h-4 w-4 text-techbiz-purple" />
-            <span className="text-sm font-medium text-techbiz-purple">Light</span>
+            <span className="text-sm font-medium">Light</span>
           </>
         ) : (
           <>
             <Moon className="h-4 w-4 text-techbiz-purple" />
-            <span className="text-sm font-medium text-techbiz-purple">Dark</span>
+            <span className="text-sm font-medium">Dark</span>
           </>
         )}
       </div>
