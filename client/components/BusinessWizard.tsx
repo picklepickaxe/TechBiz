@@ -41,7 +41,7 @@ export default function BusinessWizard() {
               setIsExpanded(true);
               setShowTip(true); // Show tip again when opening wizard
             }}
-            className="p-4 rounded-full shadow-lg bg-background dark:bg-[#696669] text-foreground dark:text-white border-2 border-border dark:border-[#696669]"
+            className="p-4 rounded-full shadow-lg bg-background dark:bg-[#696669] text-foreground dark:text-white border-2 border-border dark:border-[#696669] hover:shadow-xl hover:scale-105 transition-all duration-300 dark:hover:bg-[#7a747a]"
           >
             <div className="flex items-center gap-3">
               <Wand2 className="h-6 w-6" />
