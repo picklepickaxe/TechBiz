@@ -232,58 +232,71 @@ export default function BusinessWizard() {
 
   return (
     <>
-      {/* Floating Wizard Button */}
+      {/* Modern Circular AI Bot Button */}
       {!isExpanded && (
-        <div className="fixed bottom-6 right-6 z-50 max-w-[calc(100vw-3rem)]">
-          <Button
-            onClick={() => {
-              setIsExpanded(true);
-              setShowTip(true); // Show tip again when opening wizard
-            }}
-            className="p-4 rounded-full shadow-lg bg-background dark:bg-[#696669] text-foreground dark:text-white border-2 border-border dark:border-[#696669] hover:shadow-xl hover:scale-105 transition-all duration-300 dark:hover:bg-[#7a747a]"
-          >
-            <div className="flex items-center gap-3">
-              <Wand2 className="h-6 w-6" />
-              <div className="text-left">
-                <div className="font-bold text-lg">Your Business</div>
-                <div className="font-bold text-lg">Wizard</div>
-              </div>
-            </div>
-          </Button>
+        <div className="fixed bottom-6 right-6 z-50">
+          <div className="relative">
+            {/* AI Bot Button */}
+            <Button
+              onClick={() => {
+                setIsExpanded(true);
+                setShowTip(false);
+                setShowTooltip(false);
+              }}
+              onMouseEnter={() => !isFirstVisit && setShowTooltip(true)}
+              onMouseLeave={() => setShowTooltip(false)}
+              className="w-16 h-16 rounded-full shadow-lg bg-gradient-to-br from-primary to-accent text-primary-foreground border-2 border-primary/20 hover:shadow-xl hover:scale-110 transition-all duration-300 hover:from-primary/90 hover:to-accent/90 relative overflow-hidden group"
+            >
+              {/* AI Icon with animated background */}
+              <div className="relative z-10">
+                <div className="w-8 h-8 relative">
+                  {/* Neural network lines */}
+                  <div className="absolute inset-0">
+                    <svg
+                      viewBox="0 0 32 32"
+                      className="w-full h-full"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                    >
+                      {/* Neural network nodes */}
+                      <circle cx="8" cy="8" r="2" fill="currentColor" />
+                      <circle cx="24" cy="8" r="2" fill="currentColor" />
+                      <circle cx="16" cy="16" r="3" fill="currentColor" />
+                      <circle cx="8" cy="24" r="2" fill="currentColor" />
+                      <circle cx="24" cy="24" r="2" fill="currentColor" />
 
-          {/* Floating tip bubble - only show when wizard is not expanded */}
-          {showTip && !isExpanded && (
-            <div className="absolute bottom-full right-0 mb-4 w-80 max-w-[calc(100vw-3rem)] -translate-x-4">
-              <Card className="shadow-xl bg-background dark:bg-[#696669] border-border dark:border-[#696669] relative">
-                <CardContent className="p-4 pr-10">
-                  <div className="flex items-start gap-3">
-                    <div className="p-2 bg-muted dark:bg-white/20 rounded-full">
-                      <Sparkles className="h-4 w-4 text-foreground dark:text-white" />
-                    </div>
-                    <div className="flex-1">
-                      <p className="text-sm font-medium mb-1 text-foreground dark:text-white">
-                        Wizard Tip #{currentTip + 1}
-                      </p>
-                      <p className="text-sm text-muted-foreground dark:text-gray-300">
-                        {wizardTips[currentTip]}
-                      </p>
-                    </div>
+                      {/* Neural network connections */}
+                      <line x1="8" y1="8" x2="16" y2="16" strokeWidth="1.5" opacity="0.7" />
+                      <line x1="24" y1="8" x2="16" y2="16" strokeWidth="1.5" opacity="0.7" />
+                      <line x1="16" y1="16" x2="8" y2="24" strokeWidth="1.5" opacity="0.7" />
+                      <line x1="16" y1="16" x2="24" y2="24" strokeWidth="1.5" opacity="0.7" />
+                    </svg>
                   </div>
-                  {/* Close button */}
-                  <Button
-                    variant="ghost"
-                    size="sm"
-                    onClick={() => setShowTip(false)}
-                    className="absolute top-2 right-2 h-6 w-6 p-0 hover:bg-muted dark:hover:bg-white/20 text-muted-foreground dark:text-gray-300 hover:text-foreground dark:hover:text-white"
-                  >
-                    <X className="h-3 w-3" />
-                  </Button>
-                  {/* Speech bubble arrow */}
-                  <div className="absolute bottom-0 right-8 transform translate-y-1/2 rotate-45 w-3 h-3 bg-background dark:bg-[#696669]"></div>
-                </CardContent>
-              </Card>
-            </div>
-          )}
+                </div>
+              </div>
+
+              {/* Animated pulse effect */}
+              <div className="absolute inset-0 rounded-full bg-primary/30 animate-ping"></div>
+            </Button>
+
+            {/* Tooltip */}
+            {showTooltip && (
+              <div className="absolute bottom-full right-0 mb-3 animate-in fade-in-0 slide-in-from-bottom-2 duration-300">
+                <div className="bg-background dark:bg-[#696669] text-foreground dark:text-white px-4 py-2 rounded-lg shadow-lg border border-border dark:border-[#696669] whitespace-nowrap">
+                  <div className="flex items-center gap-2">
+                    <Bot className="h-4 w-4" />
+                    <span className="font-medium">Your Business Wizard</span>
+                  </div>
+                  <div className="text-xs text-muted-foreground dark:text-gray-300 mt-1">
+                    Ask me anything about business!
+                  </div>
+                  {/* Tooltip arrow */}
+                  <div className="absolute top-full right-4 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-background dark:border-t-[#696669]"></div>
+                </div>
+              </div>
+            )}
+          </div>
         </div>
       )}
 
