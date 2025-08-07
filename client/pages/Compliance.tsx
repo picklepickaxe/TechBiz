@@ -374,7 +374,7 @@ export default function Compliance() {
                 <Button
                   variant="secondary"
                   size="lg"
-                  className="bg-white text-primary hover:bg-gray-100"
+                  className="bg-background text-primary hover:bg-muted"
                 >
                   Explore Government Schemes
                   <ArrowRight className="ml-2 h-4 w-4" />
