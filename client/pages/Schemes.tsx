@@ -193,8 +193,8 @@ export default function Schemes() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <Link to="/" className="flex items-center space-x-2">
-              <Building2 className="h-8 w-8 text-techbiz-blue" />
-              <span className="text-2xl font-bold text-techbiz-navy">
+              <Building2 className="h-8 w-8 text-primary" />
+              <span className="text-2xl font-bold text-foreground">
                 TechBiz
               </span>
             </Link>
@@ -290,8 +290,8 @@ export default function Schemes() {
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-6xl mx-auto">
               <div className="flex items-center gap-2 mb-8">
-                <Star className="h-6 w-6 text-yellow-500" />
-                <h2 className="text-2xl font-bold text-techbiz-navy">
+                <Star className="h-6 w-6 text-accent" />
+                <h2 className="text-2xl font-bold text-foreground">
                   Featured Schemes
                 </h2>
               </div>
@@ -304,17 +304,17 @@ export default function Schemes() {
                   >
                     <CardHeader>
                       <div className="flex justify-between items-start mb-2">
-                        <Badge className="bg-yellow-500 text-white">
+                        <Badge className="bg-accent text-white">
                           Featured
                         </Badge>
                         <div className="flex items-center gap-1">
-                          <Star className="h-4 w-4 text-yellow-500" />
+                          <Star className="h-4 w-4 text-accent" />
                           <span className="text-sm font-medium">
                             {scheme.rating}
                           </span>
                         </div>
                       </div>
-                      <CardTitle className="text-xl text-techbiz-navy">
+                      <CardTitle className="text-xl text-foreground">
                         {scheme.name}
                       </CardTitle>
                       <CardDescription className="text-base">
@@ -324,27 +324,27 @@ export default function Schemes() {
                     <CardContent className="space-y-4">
                       <div className="grid grid-cols-2 gap-4 text-sm">
                         <div>
-                          <p className="text-techbiz-gray">Loan Amount</p>
-                          <p className="font-semibold text-techbiz-navy">
+                          <p className="text-muted-foreground">Loan Amount</p>
+                          <p className="font-semibold text-foreground">
                             {scheme.loanAmount}
                           </p>
                         </div>
                         <div>
-                          <p className="text-techbiz-gray">Processing Time</p>
-                          <p className="font-semibold text-techbiz-navy">
+                          <p className="text-muted-foreground">Processing Time</p>
+                          <p className="font-semibold text-foreground">
                             {scheme.processingTime}
                           </p>
                         </div>
                       </div>
 
                       <div className="space-y-2">
-                        <p className="text-sm font-medium text-techbiz-navy">
+                        <p className="text-sm font-medium text-foreground">
                           Key Benefits:
                         </p>
-                        <ul className="text-sm text-techbiz-gray space-y-1">
+                        <ul className="text-sm text-muted-foreground space-y-1">
                           {scheme.benefits.slice(0, 2).map((benefit, index) => (
                             <li key={index} className="flex items-start gap-2">
-                              <CheckCircle className="h-3 w-3 text-techbiz-green mt-0.5 flex-shrink-0" />
+                              <CheckCircle className="h-3 w-3 text-accent mt-0.5 flex-shrink-0" />
                               {benefit}
                             </li>
                           ))}
@@ -352,7 +352,7 @@ export default function Schemes() {
                       </div>
 
                       <div className="flex gap-2 pt-4">
-                        <Button className="flex-1 bg-techbiz-blue hover:bg-techbiz-blue/90">
+                        <Button className="flex-1 bg-primary hover:bg-primary/90">
                           Apply Now
                         </Button>
                         <Button variant="outline" size="sm">
@@ -373,7 +373,7 @@ export default function Schemes() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-6xl mx-auto">
             <div className="flex justify-between items-center mb-8">
-              <h2 className="text-2xl font-bold text-techbiz-navy">
+              <h2 className="text-2xl font-bold text-foreground">
                 All Schemes ({filteredSchemes.length})
               </h2>
               <Select defaultValue="rating">
@@ -398,14 +398,14 @@ export default function Schemes() {
                     <div className="flex justify-between items-start">
                       <div className="flex-1">
                         <div className="flex items-center gap-3 mb-2">
-                          <CardTitle className="text-xl text-techbiz-navy">
+                          <CardTitle className="text-xl text-foreground">
                             {scheme.name}
                           </CardTitle>
                           <Badge variant="outline" className="text-xs">
                             {scheme.category}
                           </Badge>
                           {scheme.featured && (
-                            <Badge className="bg-yellow-500 text-white text-xs">
+                            <Badge className="bg-accent text-white text-xs">
                               Featured
                             </Badge>
                           )}
@@ -429,9 +429,9 @@ export default function Schemes() {
 
                       <div className="text-right">
                         <div className="flex items-center gap-1 mb-2">
-                          <Star className="h-4 w-4 text-yellow-500" />
+                          <Star className="h-4 w-4 text-accent" />
                           <span className="font-medium">{scheme.rating}</span>
-                          <span className="text-sm text-gray-500">
+                          <span className="text-sm text-muted-foreground">
                             ({scheme.applicationsCount})
                           </span>
                         </div>
@@ -443,24 +443,24 @@ export default function Schemes() {
                     <div className="grid md:grid-cols-3 gap-6 mb-6">
                       {/* Loan Details */}
                       <div className="space-y-3">
-                        <h4 className="font-semibold text-techbiz-navy">
+                        <h4 className="font-semibold text-foreground">
                           Loan Details
                         </h4>
                         <div className="space-y-2 text-sm">
                           <div className="flex justify-between">
-                            <span className="text-techbiz-gray">Amount:</span>
+                            <span className="text-muted-foreground">Amount:</span>
                             <span className="font-medium">
                               {scheme.loanAmount}
                             </span>
                           </div>
                           <div className="flex justify-between">
-                            <span className="text-techbiz-gray">Subsidy:</span>
-                            <span className="font-medium text-techbiz-green">
+                            <span className="text-muted-foreground">Subsidy:</span>
+                            <span className="font-medium text-accent">
                               {scheme.subsidyRate}
                             </span>
                           </div>
                           <div className="flex justify-between">
-                            <span className="text-techbiz-gray">
+                            <span className="text-muted-foreground">
                               Processing:
                             </span>
                             <span className="font-medium">
@@ -472,16 +472,16 @@ export default function Schemes() {
 
                       {/* Benefits */}
                       <div className="space-y-3">
-                        <h4 className="font-semibold text-techbiz-navy">
+                        <h4 className="font-semibold text-foreground">
                           Key Benefits
                         </h4>
                         <ul className="space-y-1 text-sm">
                           {scheme.benefits.map((benefit, index) => (
                             <li
                               key={index}
-                              className="flex items-start gap-2 text-techbiz-gray"
+                              className="flex items-start gap-2 text-muted-foreground"
                             >
-                              <CheckCircle className="h-3 w-3 text-techbiz-green mt-0.5 flex-shrink-0" />
+                              <CheckCircle className="h-3 w-3 text-accent mt-0.5 flex-shrink-0" />
                               {benefit}
                             </li>
                           ))}
