@@ -347,6 +347,15 @@ export default function BusinessWizard() {
 
               {/* Chat Messages */}
               <div className="flex-1 p-4 overflow-y-auto">
+                {/* Message history indicator */}
+                {messages.length > 1 && (
+                  <div className="text-center mb-4">
+                    <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-muted dark:bg-white/20 text-xs text-muted-foreground dark:text-gray-300">
+                      <MessageCircle className="h-3 w-3" />
+                      <span>{messages.length} messages • History saved</span>
+                    </div>
+                  </div>
+                )}
                 <div className="space-y-4">
                   {messages.map((message) => (
                     <div
