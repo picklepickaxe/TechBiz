@@ -277,10 +277,10 @@ export default function BusinessWizard() {
                   {messages.map((message) => (
                     <div
                       key={message.id}
-                      className={`flex ${message.isBot ? 'justify-start' : 'justify-end'}`}
+                      className={`flex ${message.isBot ? 'justify-start' : 'justify-end'} animate-in fade-in-0 slide-in-from-bottom-2 duration-300`}
                     >
                       <div
-                        className={`max-w-xs lg:max-w-md px-4 py-2 rounded-lg ${
+                        className={`max-w-xs lg:max-w-md px-4 py-2 rounded-lg shadow-sm ${
                           message.isBot
                             ? 'bg-muted dark:bg-white/20 text-foreground dark:text-white'
                             : 'bg-primary text-primary-foreground'
@@ -292,16 +292,20 @@ export default function BusinessWizard() {
                             <span className="text-xs opacity-70">AI Assistant</span>
                           </div>
                         )}
-                        <p className="text-sm">{message.text}</p>
+                        <p className="text-sm leading-relaxed">{message.text}</p>
+                        <div className="text-xs opacity-50 mt-1">
+                          {message.timestamp.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})}
+                        </div>
                       </div>
                     </div>
                   ))}
 
                   {isTyping && (
-                    <div className="flex justify-start">
-                      <div className="bg-muted dark:bg-white/20 px-4 py-2 rounded-lg">
+                    <div className="flex justify-start animate-in fade-in-0">
+                      <div className="bg-muted dark:bg-white/20 px-4 py-2 rounded-lg shadow-sm">
                         <div className="flex items-center gap-2">
                           <Bot className="h-3 w-3" />
+                          <span className="text-xs opacity-70">AI is typing</span>
                           <div className="flex space-x-1">
                             <div className="w-2 h-2 bg-primary rounded-full animate-bounce" style={{animationDelay: '0ms'}}></div>
                             <div className="w-2 h-2 bg-primary rounded-full animate-bounce" style={{animationDelay: '150ms'}}></div>
@@ -311,6 +315,9 @@ export default function BusinessWizard() {
                       </div>
                     </div>
                   )}
+
+                  {/* Invisible element for auto-scroll */}
+                  <div ref={setMessagesEndRef} />
                 </div>
               </div>
 
