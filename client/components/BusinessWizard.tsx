@@ -89,6 +89,13 @@ export default function BusinessWizard() {
     return () => clearInterval(interval);
   }, []);
 
+  // Auto-scroll to bottom when new messages are added
+  useEffect(() => {
+    if (messagesEndRef) {
+      messagesEndRef.scrollIntoView({ behavior: 'smooth' });
+    }
+  }, [messages, isTyping]);
+
   const generateAIResponse = (userMessage) => {
     const message = userMessage.toLowerCase().trim();
 
