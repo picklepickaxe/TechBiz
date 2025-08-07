@@ -52,11 +52,11 @@ export default function AuthModal({
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="sm:max-w-[450px] p-0 overflow-hidden bg-card border-techbiz-purple/20">
+      <DialogContent className="sm:max-w-[450px] p-0 overflow-hidden bg-card border-primary/20">
         <div className="relative">
           <DialogHeader className="p-6 pb-2">
             <DialogTitle className="flex items-center gap-3 text-2xl font-bold text-foreground">
-              <div className="p-2 bg-techbiz-purple rounded-full">
+              <div className="p-2 bg-primary rounded-full">
                 <Building2 className="h-6 w-6 text-primary-foreground" />
               </div>
               Welcome to TechBiz
@@ -65,16 +65,16 @@ export default function AuthModal({
 
           <div className="p-6 pt-2">
             <Tabs defaultValue={defaultTab} className="w-full">
-              <TabsList className="grid w-full grid-cols-2 mb-6 bg-techbiz-purple/10">
+              <TabsList className="grid w-full grid-cols-2 mb-6 bg-primary/10">
                 <TabsTrigger
                   value="login"
-                  className="data-[state=active]:bg-techbiz-purple data-[state=active]:text-techbiz-black"
+                  className="data-[state=active]:bg-primary data-[state=active]:text-techbiz-black"
                 >
                   Login
                 </TabsTrigger>
                 <TabsTrigger
                   value="signup"
-                  className="data-[state=active]:bg-techbiz-purple data-[state=active]:text-techbiz-black"
+                  className="data-[state=active]:bg-primary data-[state=active]:text-techbiz-black"
                 >
                   Sign Up
                 </TabsTrigger>
@@ -97,12 +97,12 @@ export default function AuthModal({
                           Email
                         </Label>
                         <div className="relative">
-                          <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-techbiz-purple" />
+                          <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-primary" />
                           <Input
                             id="email"
                             type="email"
                             placeholder="Enter your email"
-                            className="pl-10 border-techbiz-purple/30 focus:border-techbiz-purple"
+                            className="pl-10 border-primary/30 focus:border-primary"
                             required
                           />
                         </div>
@@ -116,25 +116,25 @@ export default function AuthModal({
                           Password
                         </Label>
                         <div className="relative">
-                          <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-techbiz-purple" />
+                          <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-primary" />
                           <Input
                             id="password"
                             type={showPassword ? "text" : "password"}
                             placeholder="Enter your password"
-                            className="pl-10 pr-10 border-techbiz-purple/30 focus:border-techbiz-purple"
+                            className="pl-10 pr-10 border-primary/30 focus:border-primary"
                             required
                           />
                           <Button
                             type="button"
                             variant="ghost"
                             size="sm"
-                            className="absolute right-1 top-1/2 transform -translate-y-1/2 h-8 w-8 p-0 hover:bg-techbiz-purple/10"
+                            className="absolute right-1 top-1/2 transform -translate-y-1/2 h-8 w-8 p-0 hover:bg-primary/10"
                             onClick={() => setShowPassword(!showPassword)}
                           >
                             {showPassword ? (
-                              <EyeOff className="h-4 w-4 text-techbiz-purple" />
+                              <EyeOff className="h-4 w-4 text-primary" />
                             ) : (
-                              <Eye className="h-4 w-4 text-techbiz-purple" />
+                              <Eye className="h-4 w-4 text-primary" />
                             )}
                           </Button>
                         </div>
@@ -142,7 +142,7 @@ export default function AuthModal({
 
                       <Button
                         type="submit"
-                        className="w-full bg-techbiz-purple hover:bg-techbiz-purple/90 text-primary-foreground font-medium py-6"
+                        className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-medium py-6"
                         disabled={isLoading}
                       >
                         {isLoading ? (
@@ -159,7 +159,7 @@ export default function AuthModal({
                     <div className="text-center">
                       <Button
                         variant="link"
-                        className="text-techbiz-purple hover:text-techbiz-purple-light"
+                        className="text-primary hover:text-primary-light"
                       >
                         Forgot your password?
                       </Button>
@@ -186,11 +186,11 @@ export default function AuthModal({
                             First Name
                           </Label>
                           <div className="relative">
-                            <User className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-techbiz-purple" />
+                            <User className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-primary" />
                             <Input
                               id="firstName"
                               placeholder="First name"
-                              className="pl-10 border-techbiz-purple/30 focus:border-techbiz-purple"
+                              className="pl-10 border-primary/30 focus:border-primary"
                               required
                             />
                           </div>
@@ -206,7 +206,7 @@ export default function AuthModal({
                           <Input
                             id="lastName"
                             placeholder="Last name"
-                            className="border-techbiz-purple/30 focus:border-techbiz-purple"
+                            className="border-primary/30 focus:border-primary"
                             required
                           />
                         </div>
@@ -220,12 +220,12 @@ export default function AuthModal({
                           Email
                         </Label>
                         <div className="relative">
-                          <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-techbiz-purple" />
+                          <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-primary" />
                           <Input
                             id="signupEmail"
                             type="email"
                             placeholder="Enter your email"
-                            className="pl-10 border-techbiz-purple/30 focus:border-techbiz-purple"
+                            className="pl-10 border-primary/30 focus:border-primary"
                             required
                           />
                         </div>
@@ -239,12 +239,12 @@ export default function AuthModal({
                           Phone Number
                         </Label>
                         <div className="relative">
-                          <Phone className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-techbiz-purple" />
+                          <Phone className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-primary" />
                           <Input
                             id="phone"
                             type="tel"
                             placeholder="Enter your phone number"
-                            className="pl-10 border-techbiz-purple/30 focus:border-techbiz-purple"
+                            className="pl-10 border-primary/30 focus:border-primary"
                             required
                           />
                         </div>
@@ -258,25 +258,25 @@ export default function AuthModal({
                           Password
                         </Label>
                         <div className="relative">
-                          <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-techbiz-purple" />
+                          <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-primary" />
                           <Input
                             id="signupPassword"
                             type={showPassword ? "text" : "password"}
                             placeholder="Create a password"
-                            className="pl-10 pr-10 border-techbiz-purple/30 focus:border-techbiz-purple"
+                            className="pl-10 pr-10 border-primary/30 focus:border-primary"
                             required
                           />
                           <Button
                             type="button"
                             variant="ghost"
                             size="sm"
-                            className="absolute right-1 top-1/2 transform -translate-y-1/2 h-8 w-8 p-0 hover:bg-techbiz-purple/10"
+                            className="absolute right-1 top-1/2 transform -translate-y-1/2 h-8 w-8 p-0 hover:bg-primary/10"
                             onClick={() => setShowPassword(!showPassword)}
                           >
                             {showPassword ? (
-                              <EyeOff className="h-4 w-4 text-techbiz-purple" />
+                              <EyeOff className="h-4 w-4 text-primary" />
                             ) : (
-                              <Eye className="h-4 w-4 text-techbiz-purple" />
+                              <Eye className="h-4 w-4 text-primary" />
                             )}
                           </Button>
                         </div>
@@ -284,7 +284,7 @@ export default function AuthModal({
 
                       <Button
                         type="submit"
-                        className="w-full bg-techbiz-purple hover:bg-techbiz-purple/90 text-primary-foreground font-medium py-6"
+                        className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-medium py-6"
                         disabled={isLoading}
                       >
                         {isLoading ? (
@@ -302,14 +302,14 @@ export default function AuthModal({
                       By signing up, you agree to our{" "}
                       <Button
                         variant="link"
-                        className="p-0 h-auto text-techbiz-purple hover:text-techbiz-purple-light"
+                        className="p-0 h-auto text-primary hover:text-primary-light"
                       >
                         Terms of Service
                       </Button>{" "}
                       and{" "}
                       <Button
                         variant="link"
-                        className="p-0 h-auto text-techbiz-purple hover:text-techbiz-purple-light"
+                        className="p-0 h-auto text-primary hover:text-primary-light"
                       >
                         Privacy Policy
                       </Button>
