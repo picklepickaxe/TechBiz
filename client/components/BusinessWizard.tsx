@@ -17,17 +17,59 @@ export default function BusinessWizard() {
   const [isExpanded, setIsExpanded] = useState(false);
   const [currentTip, setCurrentTip] = useState(0);
   const [showTip, setShowTip] = useState(true);
-  const [messages, setMessages] = useState([
-    {
-      id: 1,
-      text: "Hello! I'm your Business Wizard. I can help you with business registration, licensing, and government schemes. What would you like to know?",
-      isBot: true,
-      timestamp: new Date()
-    }
-  ]);
+  const [showTooltip, setShowTooltip] = useState(false);
+  const [isFirstVisit, setIsFirstVisit] = useState(true);
+  const [messages, setMessages] = useState([]);
   const [inputMessage, setInputMessage] = useState("");
   const [isTyping, setIsTyping] = useState(false);
   const [messagesEndRef, setMessagesEndRef] = useState(null);
+
+  // Load messages from localStorage on component mount
+  useEffect(() => {
+    const savedMessages = localStorage.getItem('businessWizardMessages');
+    const isFirstVisitCheck = localStorage.getItem('businessWizardFirstVisit');
+
+    if (savedMessages) {
+      try {
+        const parsedMessages = JSON.parse(savedMessages).map(msg => ({
+          ...msg,
+          timestamp: new Date(msg.timestamp)
+        }));
+        setMessages(parsedMessages);
+      } catch (error) {
+        console.error('Error loading chat history:', error);
+        setMessages([getWelcomeMessage()]);
+      }
+    } else {
+      setMessages([getWelcomeMessage()]);
+    }
+
+    if (isFirstVisitCheck === null) {
+      setIsFirstVisit(true);
+      localStorage.setItem('businessWizardFirstVisit', 'false');
+      // Show welcome tooltip for 5 seconds on first visit
+      setTimeout(() => {
+        setShowTooltip(true);
+        setTimeout(() => setShowTooltip(false), 5000);
+      }, 1000);
+    } else {
+      setIsFirstVisit(false);
+    }
+  }, []);
+
+  // Save messages to localStorage whenever messages change
+  useEffect(() => {
+    if (messages.length > 0) {
+      localStorage.setItem('businessWizardMessages', JSON.stringify(messages));
+    }
+  }, [messages]);
+
+  const getWelcomeMessage = () => ({
+    id: Date.now(),
+    text: "Hello! I'm your Business Wizard. I can help you with business registration, licensing, and government schemes. What would you like to know?",
+    isBot: true,
+    timestamp: new Date()
+  });
 
   const wizardTips = [
     "💡 Did you know? MSME registration gives you access to 200+ government schemes!",
@@ -180,6 +222,12 @@ export default function BusinessWizard() {
       setMessages(prev => [...prev, aiResponse]);
       setIsTyping(false);
     }, thinkingTime);
+  };
+
+  const clearChatHistory = () => {
+    const welcomeMessage = getWelcomeMessage();
+    setMessages([welcomeMessage]);
+    localStorage.setItem('businessWizardMessages', JSON.stringify([welcomeMessage]));
   };
 
   return (
