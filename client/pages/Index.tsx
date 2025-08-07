@@ -100,6 +100,12 @@ export default function Index() {
               >
                 Compliance
               </Link>
+              <Link
+                to="/analytics"
+                className="text-muted-foreground hover:text-primary transition-colors font-medium"
+              >
+                Analytics
+              </Link>
               <ThemeToggle />
               <Button
                 variant="outline"
