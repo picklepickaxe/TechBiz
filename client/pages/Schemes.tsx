@@ -304,7 +304,7 @@ export default function Schemes() {
                   >
                     <CardHeader>
                       <div className="flex justify-between items-start mb-2">
-                        <Badge className="bg-accent text-white">
+                        <Badge className="bg-accent text-accent-foreground">
                           Featured
                         </Badge>
                         <div className="flex items-center gap-1">
@@ -405,7 +405,7 @@ export default function Schemes() {
                             {scheme.category}
                           </Badge>
                           {scheme.featured && (
-                            <Badge className="bg-accent text-white text-xs">
+                            <Badge className="bg-accent text-accent-foreground text-xs">
                               Featured
                             </Badge>
                           )}

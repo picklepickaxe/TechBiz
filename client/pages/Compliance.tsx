@@ -200,7 +200,7 @@ export default function Compliance() {
                   >
                     {/* Step Number */}
                     <div
-                      className={`absolute -left-4 top-6 w-8 h-8 rounded-full flex items-center justify-center text-white font-bold ${
+                      className={`absolute -left-4 top-6 w-8 h-8 rounded-full flex items-center justify-center text-primary-foreground font-bold ${
                         isCompleted
                           ? "bg-accent"
                           : isNext
@@ -348,7 +348,7 @@ export default function Compliance() {
                     <Button
                       variant="outline"
                       size="sm"
-                      className="mt-4 border-primary text-primary hover:bg-primary hover:text-white"
+                      className="mt-4 border-primary text-primary hover:bg-primary hover:text-primary-foreground"
                     >
                       Learn More
                     </Button>
@@ -384,7 +384,7 @@ export default function Compliance() {
                 <Button
                   variant="outline"
                   size="lg"
-                  className="border-white text-white hover:bg-white hover:text-primary"
+                  className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-foreground"
                 >
                   View Progress Summary
                 </Button>

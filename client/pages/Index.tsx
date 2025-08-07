@@ -189,7 +189,7 @@ export default function Index() {
       </section>
 
       {/* Business Types Quick Access */}
-      <section className="py-20 bg-primary/10 text-white relative overflow-hidden">
+      <section className="py-20 bg-primary/10 relative overflow-hidden">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-6 text-foreground">
@@ -340,7 +340,7 @@ export default function Index() {
       />
 
       {/* Footer */}
-      <footer className="bg-muted text-white py-16 border-t border-border/20">
+      <footer className="bg-muted text-foreground py-16 border-t border-border/20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-4 gap-8">
             <div className="md:col-span-2">
