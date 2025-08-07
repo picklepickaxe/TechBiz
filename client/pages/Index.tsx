@@ -398,6 +398,14 @@ export default function Index() {
                     Government Schemes
                   </Link>
                 </li>
+                <li>
+                  <Link
+                    to="/analytics"
+                    className="hover:text-primary transition-colors"
+                  >
+                    Analytics Dashboard
+                  </Link>
+                </li>
               </ul>
             </div>
 
