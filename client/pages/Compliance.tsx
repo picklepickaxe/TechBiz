@@ -192,10 +192,10 @@ export default function Compliance() {
                     key={step.id}
                     className={`relative border-2 transition-all ${
                       isCompleted
-                        ? "border-accent bg-green-50"
+                        ? "border-accent bg-accent/10"
                         : isNext
-                          ? "border-primary bg-blue-50"
-                          : "border-gray-200"
+                          ? "border-primary bg-primary/10"
+                          : "border-border"
                     }`}
                   >
                     {/* Step Number */}
@@ -205,7 +205,7 @@ export default function Compliance() {
                           ? "bg-accent"
                           : isNext
                             ? "bg-primary"
-                            : "bg-gray-400"
+                            : "bg-muted-foreground"
                       }`}
                     >
                       {isCompleted ? (
