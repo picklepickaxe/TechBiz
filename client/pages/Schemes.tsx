@@ -490,17 +490,17 @@ export default function Schemes() {
 
                       {/* Eligibility */}
                       <div className="space-y-3">
-                        <h4 className="font-semibold text-techbiz-navy">
+                        <h4 className="font-semibold text-foreground">
                           Eligibility
                         </h4>
-                        <p className="text-sm text-techbiz-gray">
+                        <p className="text-sm text-muted-foreground">
                           {scheme.eligibility}
                         </p>
                       </div>
                     </div>
 
                     <div className="flex gap-3">
-                      <Button className="bg-techbiz-blue hover:bg-techbiz-blue/90">
+                      <Button className="bg-primary hover:bg-primary/90">
                         Apply for This Scheme
                         <ArrowRight className="ml-2 h-4 w-4" />
                       </Button>
@@ -516,20 +516,20 @@ export default function Schemes() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-techbiz-navy text-white">
+      <section className="py-16 bg-foreground text-background">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl font-bold mb-6">
               Need Personalized Recommendations?
             </h2>
-            <p className="text-xl text-gray-300 mb-8">
+            <p className="text-xl text-background/80 mb-8">
               Our experts can help you identify the best schemes for your
               specific business type, industry, and growth stage.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button
                 size="lg"
-                className="bg-techbiz-blue hover:bg-techbiz-blue/90"
+                className="bg-primary hover:bg-primary/90"
               >
                 Get Expert Consultation
               </Button>
@@ -537,7 +537,7 @@ export default function Schemes() {
                 <Button
                   variant="outline"
                   size="lg"
-                  className="border-white text-white hover:bg-white hover:text-techbiz-navy"
+                  className="border-background text-background hover:bg-background hover:text-foreground"
                 >
                   Start Business Journey
                 </Button>
