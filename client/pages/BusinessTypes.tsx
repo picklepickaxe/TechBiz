@@ -79,7 +79,7 @@ export default function BusinessTypes() {
         "Government tenders priority",
       ],
       timeToSetup: "15-30 days",
-      cost: "₹10,000 - ₹25,000",
+      cost: "���10,000 - ₹25,000",
       recommended: false,
     },
   ];
@@ -87,12 +87,12 @@ export default function BusinessTypes() {
   return (
     <div className="min-h-screen bg-background">
       {/* Navigation */}
-      <nav className="border-b bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/60 sticky top-0 z-50">
+      <nav className="border-b bg-background/95 backdrop-blur sticky top-0 z-50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <Link to="/" className="flex items-center space-x-2">
-              <Building2 className="h-8 w-8 text-techbiz-blue" />
-              <span className="text-2xl font-bold text-techbiz-navy">
+              <Building2 className="h-8 w-8 text-primary" />
+              <span className="text-2xl font-bold text-foreground">
                 TechBiz
               </span>
             </Link>
@@ -113,13 +113,13 @@ export default function BusinessTypes() {
       </nav>
 
       {/* Header Section */}
-      <section className="py-16 bg-gradient-to-r from-techbiz-blue to-techbiz-green text-white">
+      <section className="py-16 bg-gradient-to-r from-primary to-accent text-primary-foreground">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
               Choose Your Business Structure
             </h1>
-            <p className="text-xl text-blue-100 mb-8">
+            <p className="text-xl text-primary-foreground/80 mb-8">
               Select the business type that best fits your goals and
               requirements. Each structure has different benefits, compliance
               requirements, and growth potential.
@@ -137,12 +137,12 @@ export default function BusinessTypes() {
                 key={type.id}
                 className={`relative border-2 hover:shadow-xl transition-all hover:-translate-y-1 ${
                   type.recommended
-                    ? "border-techbiz-green shadow-lg ring-2 ring-techbiz-green/20"
-                    : "border-gray-200 hover:border-techbiz-blue/50"
+                    ? "border-accent shadow-lg ring-2 ring-accent/20"
+                    : "border-border hover:border-primary/50"
                 }`}
               >
                 {type.recommended && (
-                  <Badge className="absolute -top-3 left-6 bg-techbiz-green text-white">
+                  <Badge className="absolute -top-3 left-6 bg-accent text-accent-foreground">
                     Recommended
                   </Badge>
                 )}
@@ -151,16 +151,16 @@ export default function BusinessTypes() {
                   <div
                     className={`w-16 h-16 rounded-full flex items-center justify-center mb-4 ${
                       type.recommended
-                        ? "bg-techbiz-green/10 text-techbiz-green"
-                        : "bg-techbiz-blue/10 text-techbiz-blue"
+                        ? "bg-accent/10 text-accent"
+                        : "bg-primary/10 text-primary"
                     }`}
                   >
                     {type.icon}
                   </div>
-                  <CardTitle className="text-2xl text-techbiz-navy">
+                  <CardTitle className="text-2xl text-foreground">
                     {type.title}
                   </CardTitle>
-                  <CardDescription className="text-base text-techbiz-gray">
+                  <CardDescription className="text-base text-muted-foreground">
                     {type.description}
                   </CardDescription>
                 </CardHeader>
@@ -168,16 +168,16 @@ export default function BusinessTypes() {
                 <CardContent className="space-y-6">
                   {/* Features */}
                   <div>
-                    <h4 className="font-semibold text-techbiz-navy mb-3">
+                    <h4 className="font-semibold text-foreground mb-3">
                       Key Features:
                     </h4>
                     <ul className="space-y-2">
                       {type.features.map((feature, index) => (
                         <li
                           key={index}
-                          className="flex items-center text-techbiz-gray"
+                          className="flex items-center text-muted-foreground"
                         >
-                          <Check className="h-4 w-4 text-techbiz-green mr-2 flex-shrink-0" />
+                          <Check className="h-4 w-4 text-accent mr-2 flex-shrink-0" />
                           {feature}
                         </li>
                       ))}
@@ -185,18 +185,18 @@ export default function BusinessTypes() {
                   </div>
 
                   {/* Timeline and Cost */}
-                  <div className="grid grid-cols-2 gap-4 pt-4 border-t border-gray-100">
+                  <div className="grid grid-cols-2 gap-4 pt-4 border-t border-border">
                     <div>
-                      <p className="text-sm text-techbiz-gray">Setup Time</p>
-                      <p className="font-semibold text-techbiz-navy">
+                      <p className="text-sm text-muted-foreground">Setup Time</p>
+                      <p className="font-semibold text-foreground">
                         {type.timeToSetup}
                       </p>
                     </div>
                     <div>
-                      <p className="text-sm text-techbiz-gray">
+                      <p className="text-sm text-muted-foreground">
                         Estimated Cost
                       </p>
-                      <p className="font-semibold text-techbiz-navy">
+                      <p className="font-semibold text-foreground">
                         {type.cost}
                       </p>
                     </div>
@@ -207,9 +207,9 @@ export default function BusinessTypes() {
                     <Button
                       className={`w-full ${
                         type.recommended
-                          ? "bg-techbiz-green hover:bg-techbiz-green/90"
-                          : "bg-techbiz-blue hover:bg-techbiz-blue/90"
-                      } text-white`}
+                          ? "bg-accent hover:bg-accent/90"
+                          : "bg-primary hover:bg-primary/90"
+                      } text-primary-foreground`}
                       size="lg"
                     >
                       Start {type.title} Journey
@@ -224,13 +224,13 @@ export default function BusinessTypes() {
       </section>
 
       {/* Comparison CTA */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 bg-muted/50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl font-bold text-techbiz-navy mb-6">
+            <h2 className="text-3xl font-bold text-foreground mb-6">
               Need Help Deciding?
             </h2>
-            <p className="text-xl text-techbiz-gray mb-8">
+            <p className="text-xl text-muted-foreground mb-8">
               Our experts can help you choose the right business structure based
               on your specific needs, investment capacity, and growth plans.
             </p>
@@ -239,14 +239,14 @@ export default function BusinessTypes() {
                 <Button
                   variant="outline"
                   size="lg"
-                  className="border-techbiz-blue text-techbiz-blue hover:bg-techbiz-blue hover:text-white"
+                  className="border-primary text-primary hover:bg-primary hover:text-primary-foreground"
                 >
                   Compare Government Schemes
                 </Button>
               </Link>
               <Button
                 size="lg"
-                className="bg-techbiz-blue hover:bg-techbiz-blue/90 text-white"
+                className="bg-primary hover:bg-primary/90 text-primary-foreground"
               >
                 Consult an Expert
               </Button>
