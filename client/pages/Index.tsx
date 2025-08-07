@@ -229,13 +229,13 @@ export default function Index() {
       </section>
 
       {/* Key Challenges Section */}
-      <section className="py-20 bg-techbiz-black">
+      <section className="py-20 bg-muted">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-techbiz-white mb-6">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
               Business Challenges We Solve
             </h2>
-            <p className="text-xl text-techbiz-grey">
+            <p className="text-xl text-muted-foreground">
               Businesses face numerous obstacles in today's complex regulatory
               environment. TechBiz addresses these pain points with innovative
               solutions.
@@ -243,45 +243,45 @@ export default function Index() {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <Card className="border-techbiz-grey/20 bg-techbiz-black/50 hover:bg-techbiz-black/70 transition-colors">
+            <Card className="border-border/20 bg-muted/50 hover:bg-muted/70 transition-colors">
               <CardHeader>
                 <Clock className="h-8 w-8 text-primary mb-4" />
-                <CardTitle className="text-techbiz-white">
+                <CardTitle className="text-foreground">
                   Time-Consuming Processes
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <CardDescription className="text-base text-techbiz-grey">
+                <CardDescription className="text-base text-muted-foreground">
                   Redundant and fragmented regulatory processes that delay
                   business operations.
                 </CardDescription>
               </CardContent>
             </Card>
 
-            <Card className="border-techbiz-grey/20 bg-techbiz-black/50 hover:bg-techbiz-black/70 transition-colors">
+            <Card className="border-border/20 bg-muted/50 hover:bg-muted/70 transition-colors">
               <CardHeader>
                 <FileText className="h-8 w-8 text-primary mb-4" />
-                <CardTitle className="text-techbiz-white">
+                <CardTitle className="text-foreground">
                   Lack of Tracking
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <CardDescription className="text-base text-techbiz-grey">
+                <CardDescription className="text-base text-muted-foreground">
                   No real-time tracking of approvals and licenses, leading to
                   uncertainty.
                 </CardDescription>
               </CardContent>
             </Card>
 
-            <Card className="border-techbiz-grey/20 bg-techbiz-black/50 hover:bg-techbiz-black/70 transition-colors">
+            <Card className="border-border/20 bg-muted/50 hover:bg-muted/70 transition-colors">
               <CardHeader>
                 <Users className="h-8 w-8 text-primary mb-4" />
-                <CardTitle className="text-techbiz-white">
+                <CardTitle className="text-foreground">
                   Dependency on Middlemen
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <CardDescription className="text-base text-techbiz-grey">
+                <CardDescription className="text-base text-muted-foreground">
                   High dependency on consultants increases costs and reduces
                   transparency.
                 </CardDescription>
@@ -292,13 +292,13 @@ export default function Index() {
       </section>
 
       {/* Features Section */}
-      <section className="py-20 bg-techbiz-black">
+      <section className="py-20 bg-muted">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-techbiz-white mb-6">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
               Why Choose TechBiz?
             </h2>
-            <p className="text-xl text-techbiz-grey">
+            <p className="text-xl text-muted-foreground">
               Our platform provides end-to-end solutions for all your business
               needs in Delhi.
             </p>
@@ -308,18 +308,18 @@ export default function Index() {
             {features.map((feature, index) => (
               <Card
                 key={index}
-                className="text-center border-techbiz-grey/20 bg-techbiz-black/50 hover:bg-techbiz-black/70 transition-colors"
+                className="text-center border-border/20 bg-muted/50 hover:bg-muted/70 transition-colors"
               >
                 <CardHeader>
                   <div className="mx-auto w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center text-primary mb-4">
                     {feature.icon}
                   </div>
-                  <CardTitle className="text-lg text-techbiz-white">
+                  <CardTitle className="text-lg text-foreground">
                     {feature.title}
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <CardDescription className="text-base text-techbiz-grey">
+                  <CardDescription className="text-base text-muted-foreground">
                     {feature.description}
                   </CardDescription>
                 </CardContent>
@@ -340,17 +340,17 @@ export default function Index() {
       />
 
       {/* Footer */}
-      <footer className="bg-techbiz-black text-white py-16 border-t border-techbiz-grey/20">
+      <footer className="bg-muted text-white py-16 border-t border-border/20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-4 gap-8">
             <div className="md:col-span-2">
               <div className="flex items-center space-x-2 mb-6">
                 <Building2 className="h-8 w-8 text-primary" />
-                <span className="text-2xl font-bold text-techbiz-white">
+                <span className="text-2xl font-bold text-foreground">
                   TechBiz
                 </span>
               </div>
-              <p className="text-techbiz-grey mb-6 max-w-md">
+              <p className="text-muted-foreground mb-6 max-w-md">
                 Simplifying business operations in Delhi with innovative digital
                 solutions for entrepreneurs and enterprises.
               </p>
@@ -426,7 +426,7 @@ export default function Index() {
             </div>
           </div>
 
-          <div className="border-t border-techbiz-grey/20 mt-12 pt-8 text-center text-techbiz-grey">
+          <div className="border-t border-border/20 mt-12 pt-8 text-center text-muted-foreground">
             <p>
               &copy; 2025 TechBiz. All rights reserved. Empowering businesses in
               Delhi.
