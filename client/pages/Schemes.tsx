@@ -300,7 +300,7 @@ export default function Schemes() {
                 {featuredSchemes.map((scheme) => (
                   <Card
                     key={scheme.id}
-                    className="border-2 border-yellow-200 bg-yellow-50/50 hover:shadow-xl transition-all hover:-translate-y-1"
+                    className="border-2 border-accent/30 bg-accent/5 hover:shadow-xl transition-all hover:-translate-y-1"
                   >
                     <CardHeader>
                       <div className="flex justify-between items-start mb-2">
