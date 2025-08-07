@@ -188,6 +188,46 @@ export default function Index() {
         </div>
       </section>
 
+      {/* Business Types Quick Access */}
+      <section className="py-20 bg-primary/10 text-white relative overflow-hidden">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-foreground">
+              Select Your Business Type
+            </h2>
+            <p className="text-xl mb-12 text-muted-foreground">
+              Get personalized guidance based on your business structure
+            </p>
+
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+              {businessTypes.map((type, index) => (
+                <Link key={index} to="/business-types">
+                  <Card className="border-primary/30 bg-card/80 hover:bg-card/90 transition-all duration-300 cursor-pointer hover:scale-105 hover:shadow-lg hover:border-primary/60">
+                    <CardHeader className="text-center py-8">
+                      <CardTitle className="text-foreground text-base md:text-lg">
+                        {type}
+                      </CardTitle>
+                    </CardHeader>
+                  </Card>
+                </Link>
+              ))}
+            </div>
+
+            <div className="mt-12">
+              <Link to="/business-types">
+                <Button
+                  size="lg"
+                  className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-6 text-lg transition-all duration-300 hover:scale-105 hover:shadow-lg"
+                >
+                  Get Started Now
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Button>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Key Challenges Section */}
       <section className="py-20 bg-techbiz-black">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
