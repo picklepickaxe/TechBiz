@@ -27,6 +27,7 @@ export default function BusinessWizard() {
   ]);
   const [inputMessage, setInputMessage] = useState("");
   const [isTyping, setIsTyping] = useState(false);
+  const [messagesEndRef, setMessagesEndRef] = useState(null);
 
   const wizardTips = [
     "💡 Did you know? MSME registration gives you access to 200+ government schemes!",
