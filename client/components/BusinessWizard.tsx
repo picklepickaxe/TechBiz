@@ -147,9 +147,10 @@ export default function BusinessWizard() {
   const handleSendMessage = async () => {
     if (!inputMessage.trim()) return;
 
+    const currentInput = inputMessage;
     const userMessage = {
-      id: messages.length + 1,
-      text: inputMessage,
+      id: Date.now(),
+      text: currentInput,
       isBot: false,
       timestamp: new Date()
     };
@@ -158,17 +159,19 @@ export default function BusinessWizard() {
     setInputMessage("");
     setIsTyping(true);
 
-    // Simulate AI thinking time
+    // Simulate realistic AI thinking time (1-3 seconds based on message length)
+    const thinkingTime = Math.min(3000, Math.max(1000, currentInput.length * 50));
+
     setTimeout(() => {
       const aiResponse = {
-        id: messages.length + 2,
-        text: generateAIResponse(inputMessage),
+        id: Date.now() + 1,
+        text: generateAIResponse(currentInput),
         isBot: true,
         timestamp: new Date()
       };
       setMessages(prev => [...prev, aiResponse]);
       setIsTyping(false);
-    }, 1500);
+    }, thinkingTime);
   };
 
   return (
