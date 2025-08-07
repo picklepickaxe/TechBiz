@@ -328,7 +328,7 @@ export default function Compliance() {
                         }
                         className={
                           license.status === "conditional"
-                            ? "border-orange-500 text-orange-600"
+                            ? "border-yellow-500 text-yellow-600 dark:border-yellow-400 dark:text-yellow-400"
                             : ""
                         }
                       >
