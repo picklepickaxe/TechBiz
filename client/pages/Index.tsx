@@ -63,10 +63,10 @@ export default function Index() {
   ];
 
   const stats = [
-    { value: "50K+", label: "Businesses Registered" },
-    { value: "200+", label: "Government Schemes" },
-    { value: "98%", label: "Success Rate" },
-    { value: "24/7", label: "Support Available" },
+    { value: "50+", label: "Government Schemes" },
+    { value: "15+", label: "License Types" },
+    { value: "24/7", label: "AI Support" },
+    { value: "100%", label: "Digital Process" },
   ];
 
   return (
@@ -76,7 +76,7 @@ export default function Index() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center space-x-2">
-              <Building2 className="h-8 w-8 text-techbiz-purple" />
+              <Building2 className="h-8 w-8 text-primary" />
               <span className="text-2xl font-bold text-foreground">
                 TechBiz
               </span>
@@ -84,19 +84,19 @@ export default function Index() {
             <div className="hidden md:flex items-center space-x-6">
               <Link
                 to="/business-types"
-                className="text-muted-foreground hover:text-techbiz-purple transition-colors font-medium"
+                className="text-muted-foreground hover:text-primary transition-colors font-medium"
               >
                 Business Types
               </Link>
               <Link
                 to="/schemes"
-                className="text-muted-foreground hover:text-techbiz-purple transition-colors font-medium"
+                className="text-muted-foreground hover:text-primary transition-colors font-medium"
               >
                 Schemes
               </Link>
               <Link
                 to="/compliance"
-                className="text-muted-foreground hover:text-techbiz-purple transition-colors font-medium"
+                className="text-muted-foreground hover:text-primary transition-colors font-medium"
               >
                 Compliance
               </Link>
@@ -105,14 +105,14 @@ export default function Index() {
                 variant="outline"
                 size="sm"
                 onClick={() => setAuthModal({ isOpen: true, type: "login" })}
-                className="border-techbiz-purple/30 text-techbiz-purple hover:bg-techbiz-purple hover:text-primary-foreground transition-all duration-300"
+                className="border-primary/30 text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300"
               >
                 Log In
               </Button>
               <Button
                 size="sm"
                 onClick={() => setAuthModal({ isOpen: true, type: "signup" })}
-                className="bg-techbiz-purple hover:bg-techbiz-purple/90 text-primary-foreground"
+                className="bg-primary hover:bg-primary/90 text-primary-foreground"
               >
                 Sign Up
               </Button>
@@ -137,7 +137,7 @@ export default function Index() {
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-foreground mb-6 leading-tight">
               Easing out business activities for
-              <span className="bg-gradient-to-r from-techbiz-purple to-techbiz-purple-light bg-clip-text text-transparent animate-gradient-shift">
+              <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent animate-gradient-shift">
                 {" "}
                 growth
               </span>
@@ -153,7 +153,7 @@ export default function Index() {
               <Link to="/business-types">
                 <Button
                   size="lg"
-                  className="bg-techbiz-purple hover:bg-techbiz-purple/90 text-primary-foreground px-8 py-6 text-lg transition-all duration-300 hover:scale-105 hover:shadow-lg"
+                  className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-6 text-lg transition-all duration-300 hover:scale-105 hover:shadow-lg"
                 >
                   Start Your Business Journey
                   <ArrowRight className="ml-2 h-5 w-5" />
@@ -164,7 +164,7 @@ export default function Index() {
                 <Button
                   variant="outline"
                   size="lg"
-                  className="border-techbiz-purple text-techbiz-purple hover:bg-techbiz-purple hover:text-primary-foreground px-8 py-6 text-lg transition-all duration-300 hover:scale-105 hover:shadow-lg"
+                  className="border-primary text-primary hover:bg-primary hover:text-primary-foreground px-8 py-6 text-lg transition-all duration-300 hover:scale-105 hover:shadow-lg"
                 >
                   Compare Schemes
                 </Button>
@@ -205,7 +205,7 @@ export default function Index() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <Card className="border-techbiz-grey/20 bg-techbiz-black/50 hover:bg-techbiz-black/70 transition-colors">
               <CardHeader>
-                <Clock className="h-8 w-8 text-techbiz-purple mb-4" />
+                <Clock className="h-8 w-8 text-primary mb-4" />
                 <CardTitle className="text-techbiz-white">
                   Time-Consuming Processes
                 </CardTitle>
@@ -220,7 +220,7 @@ export default function Index() {
 
             <Card className="border-techbiz-grey/20 bg-techbiz-black/50 hover:bg-techbiz-black/70 transition-colors">
               <CardHeader>
-                <FileText className="h-8 w-8 text-techbiz-purple mb-4" />
+                <FileText className="h-8 w-8 text-primary mb-4" />
                 <CardTitle className="text-techbiz-white">
                   Lack of Tracking
                 </CardTitle>
@@ -235,7 +235,7 @@ export default function Index() {
 
             <Card className="border-techbiz-grey/20 bg-techbiz-black/50 hover:bg-techbiz-black/70 transition-colors">
               <CardHeader>
-                <Users className="h-8 w-8 text-techbiz-purple mb-4" />
+                <Users className="h-8 w-8 text-primary mb-4" />
                 <CardTitle className="text-techbiz-white">
                   Dependency on Middlemen
                 </CardTitle>
@@ -271,7 +271,7 @@ export default function Index() {
                 className="text-center border-techbiz-grey/20 bg-techbiz-black/50 hover:bg-techbiz-black/70 transition-colors"
               >
                 <CardHeader>
-                  <div className="mx-auto w-12 h-12 bg-techbiz-purple/10 rounded-full flex items-center justify-center text-techbiz-purple mb-4">
+                  <div className="mx-auto w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center text-primary mb-4">
                     {feature.icon}
                   </div>
                   <CardTitle className="text-lg text-techbiz-white">
@@ -290,7 +290,7 @@ export default function Index() {
       </section>
 
       {/* Business Types Quick Access */}
-      <section className="py-20 bg-techbiz-purple/10 text-white relative overflow-hidden">
+      <section className="py-20 bg-primary/10 text-white relative overflow-hidden">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-6 text-foreground">
@@ -303,7 +303,7 @@ export default function Index() {
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               {businessTypes.map((type, index) => (
                 <Link key={index} to="/business-types">
-                  <Card className="border-techbiz-purple/30 bg-card/80 hover:bg-card/90 transition-all duration-300 cursor-pointer hover:scale-105 hover:shadow-lg hover:border-techbiz-purple/60">
+                  <Card className="border-primary/30 bg-card/80 hover:bg-card/90 transition-all duration-300 cursor-pointer hover:scale-105 hover:shadow-lg hover:border-primary/60">
                     <CardHeader className="text-center py-8">
                       <CardTitle className="text-foreground text-base md:text-lg">
                         {type}
@@ -318,7 +318,7 @@ export default function Index() {
               <Link to="/business-types">
                 <Button
                   size="lg"
-                  className="bg-techbiz-purple hover:bg-techbiz-purple/90 text-primary-foreground px-8 py-6 text-lg transition-all duration-300 hover:scale-105 hover:shadow-lg"
+                  className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-6 text-lg transition-all duration-300 hover:scale-105 hover:shadow-lg"
                 >
                   Get Started Now
                   <ArrowRight className="ml-2 h-5 w-5" />
@@ -345,7 +345,7 @@ export default function Index() {
           <div className="grid md:grid-cols-4 gap-8">
             <div className="md:col-span-2">
               <div className="flex items-center space-x-2 mb-6">
-                <Building2 className="h-8 w-8 text-techbiz-purple" />
+                <Building2 className="h-8 w-8 text-primary" />
                 <span className="text-2xl font-bold text-techbiz-white">
                   TechBiz
                 </span>
@@ -358,7 +358,7 @@ export default function Index() {
                 <Button
                   variant="outline"
                   size="sm"
-                  className="border-techbiz-purple/30 text-techbiz-purple hover:bg-techbiz-purple/10"
+                  className="border-primary/30 text-primary hover:bg-primary/10"
                 >
                   Contact Support
                 </Button>
@@ -371,7 +371,7 @@ export default function Index() {
                 <li>
                   <Link
                     to="/business-types"
-                    className="hover:text-techbiz-purple transition-colors"
+                    className="hover:text-primary transition-colors"
                   >
                     Business Registration
                   </Link>
@@ -379,7 +379,7 @@ export default function Index() {
                 <li>
                   <Link
                     to="/compliance"
-                    className="hover:text-techbiz-purple transition-colors"
+                    className="hover:text-primary transition-colors"
                   >
                     License Management
                   </Link>
@@ -387,7 +387,7 @@ export default function Index() {
                 <li>
                   <Link
                     to="/schemes"
-                    className="hover:text-techbiz-purple transition-colors"
+                    className="hover:text-primary transition-colors"
                   >
                     Government Schemes
                   </Link>
@@ -401,7 +401,7 @@ export default function Index() {
                 <li>
                   <Link
                     to="/help"
-                    className="hover:text-techbiz-purple transition-colors"
+                    className="hover:text-primary transition-colors"
                   >
                     Help Center
                   </Link>
@@ -409,7 +409,7 @@ export default function Index() {
                 <li>
                   <Link
                     to="/guides"
-                    className="hover:text-techbiz-purple transition-colors"
+                    className="hover:text-primary transition-colors"
                   >
                     Business Guides
                   </Link>
@@ -417,7 +417,7 @@ export default function Index() {
                 <li>
                   <Link
                     to="/contact"
-                    className="hover:text-techbiz-purple transition-colors"
+                    className="hover:text-primary transition-colors"
                   >
                     Contact Us
                   </Link>
@@ -428,7 +428,7 @@ export default function Index() {
 
           <div className="border-t border-techbiz-grey/20 mt-12 pt-8 text-center text-techbiz-grey">
             <p>
-              &copy; 2024 TechBiz. All rights reserved. Empowering businesses in
+              &copy; 2025 TechBiz. All rights reserved. Empowering businesses in
               Delhi.
             </p>
           </div>
