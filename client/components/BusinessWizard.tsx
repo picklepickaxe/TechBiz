@@ -117,10 +117,17 @@ export default function BusinessWizard() {
     'time': 'Timeline varies: Business registration (3-7 days), GST (3-5 days), MSME (1-2 days), FSSAI (7-15 days). Parallel processing can reduce overall time. Planning to start soon?',
     'delhi': 'Delhi offers excellent business infrastructure with single-window clearances, online services, and startup-friendly policies. The Delhi Startup Policy provides additional benefits for new businesses.',
 
+    // Analytics and Data
+    'analytics': 'Our Analytics Dashboard provides comprehensive business insights with interactive charts, AI-powered analysis, and predictive modeling. You can track registration trends, scheme performance, and revenue analytics. Visit the Analytics section to explore!',
+    'dashboard': 'The Analytics Dashboard offers multiple chart types (bar, line, area, pie) with AI analysis. You can upload your own datasets or explore example data to understand business trends and get predictions.',
+    'data': 'You can analyze business data including registration trends, scheme performance, compliance tracking, and revenue analytics. Our AI provides insights, predictions, and recommendations based on data patterns.',
+    'charts': 'We support various chart types: Bar charts for comparisons, Line charts for trends, Area charts for cumulative data, and Pie charts for distributions. All charts are interactive with detailed tooltips.',
+    'predictions': 'Our AI analyzes historical data to predict future trends like registration growth, scheme demand, and market opportunities. The predictions help in strategic planning and resource allocation.',
+
     // Default responses
-    'greeting': 'Hello! I\'m your Business Wizard, here to guide you through business registration, licensing, and compliance in Delhi. I can help with MSME registration, GST, government schemes, and much more. What would you like to know?',
-    'thanks': 'You\'re welcome! Feel free to ask any other questions about business registration, licensing, or government schemes. I\'m here to help make your business journey smooth!',
-    'default': 'I can help you with business registration, MSME benefits, GST registration, startup schemes, government licensing, and compliance requirements. Could you be more specific about what you\'d like to know?'
+    'greeting': 'Hello! I\'m your Business Wizard, here to guide you through business registration, licensing, compliance, and analytics in Delhi. I can help with MSME registration, GST, government schemes, data analysis, and much more. What would you like to know?',
+    'thanks': 'You\'re welcome! Feel free to ask any other questions about business registration, licensing, government schemes, or analytics. I\'m here to help make your business journey smooth!',
+    'default': 'I can help you with business registration, MSME benefits, GST registration, startup schemes, government licensing, compliance requirements, and business analytics. Could you be more specific about what you\'d like to know?'
   };
 
   useEffect(() => {
