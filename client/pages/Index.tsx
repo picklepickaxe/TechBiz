@@ -83,13 +83,8 @@ export default function Index() {
             </div>
             <div className="hidden md:flex items-center space-x-6">
               <Link
-<<<<<<< HEAD
                 to="/business-types"
                 className="text-muted-foreground hover:text-primary transition-colors font-medium"
-=======
-                to="/business-type"
-                className="text-muted-foreground hover:text-techbiz-purple transition-colors font-medium"
->>>>>>> 072cbf9b2ab221a7c872f0b07e20e67f8c61492c
               >
                 Business Types
               </Link>
@@ -161,7 +156,7 @@ export default function Index() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-              <Link to="/business-type">
+              <Link to="/business-types">
                 <Button
                   size="lg"
                   className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-6 text-lg transition-all duration-300 hover:scale-105 hover:shadow-lg"
@@ -212,13 +207,8 @@ export default function Index() {
 
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               {businessTypes.map((type, index) => (
-<<<<<<< HEAD
                 <Link key={index} to="/business-types">
                   <Card className="border-primary/30 bg-card/80 hover:bg-card/90 transition-all duration-300 cursor-pointer hover:scale-105 hover:shadow-lg hover:border-primary/60">
-=======
-                <Link key={index} to="/business-type">
-                  <Card className="border-techbiz-purple/30 bg-card/80 hover:bg-card/90 transition-all duration-300 cursor-pointer hover:scale-105 hover:shadow-lg hover:border-techbiz-purple/60">
->>>>>>> 072cbf9b2ab221a7c872f0b07e20e67f8c61492c
                     <CardHeader className="text-center py-8">
                       <CardTitle className="text-foreground text-base md:text-lg">
                         {type}
@@ -230,7 +220,7 @@ export default function Index() {
             </div>
 
             <div className="mt-12">
-              <Link to="/business-type">
+              <Link to="/business-types">
                 <Button
                   size="lg"
                   className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-6 text-lg transition-all duration-300 hover:scale-105 hover:shadow-lg"
@@ -386,13 +376,8 @@ export default function Index() {
               <ul className="space-y-2 text-muted-foreground">
                 <li>
                   <Link
-<<<<<<< HEAD
                     to="/business-types"
                     className="hover:text-primary transition-colors"
-=======
-                    to="/business-type"
-                    className="hover:text-techbiz-purple transition-colors"
->>>>>>> 072cbf9b2ab221a7c872f0b07e20e67f8c61492c
                   >
                     Business Registration
                   </Link>
