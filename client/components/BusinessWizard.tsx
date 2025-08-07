@@ -472,6 +472,14 @@ export default function BusinessWizard() {
                   >
                     📋 Licenses
                   </Button>
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    onClick={() => setInputMessage("Tell me about the analytics dashboard")}
+                    className="text-xs"
+                  >
+                    📊 Analytics
+                  </Button>
                 </div>
               </div>
             </div>
