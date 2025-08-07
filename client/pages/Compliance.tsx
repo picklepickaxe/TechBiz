@@ -124,8 +124,8 @@ export default function Compliance() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <Link to="/" className="flex items-center space-x-2">
-              <Building2 className="h-8 w-8 text-techbiz-blue" />
-              <span className="text-2xl font-bold text-techbiz-navy">
+              <Building2 className="h-8 w-8 text-primary" />
+              <span className="text-2xl font-bold text-foreground">
                 TechBiz
               </span>
             </Link>
@@ -178,7 +178,7 @@ export default function Compliance() {
       <section className="py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-techbiz-navy mb-12 text-center">
+            <h2 className="text-3xl font-bold text-foreground mb-12 text-center">
               Registration & Licensing Steps
             </h2>
 
@@ -192,9 +192,9 @@ export default function Compliance() {
                     key={step.id}
                     className={`relative border-2 transition-all ${
                       isCompleted
-                        ? "border-techbiz-green bg-green-50"
+                        ? "border-accent bg-green-50"
                         : isNext
-                          ? "border-techbiz-blue bg-blue-50"
+                          ? "border-primary bg-blue-50"
                           : "border-gray-200"
                     }`}
                   >
@@ -202,9 +202,9 @@ export default function Compliance() {
                     <div
                       className={`absolute -left-4 top-6 w-8 h-8 rounded-full flex items-center justify-center text-white font-bold ${
                         isCompleted
-                          ? "bg-techbiz-green"
+                          ? "bg-accent"
                           : isNext
-                            ? "bg-techbiz-blue"
+                            ? "bg-primary"
                             : "bg-gray-400"
                       }`}
                     >
@@ -218,7 +218,7 @@ export default function Compliance() {
                     <CardHeader className="ml-8">
                       <div className="flex items-center justify-between">
                         <div>
-                          <CardTitle className="text-xl text-techbiz-navy mb-2">
+                          <CardTitle className="text-xl text-foreground mb-2">
                             {step.title}
                           </CardTitle>
                           <CardDescription className="text-base">
@@ -245,7 +245,7 @@ export default function Compliance() {
                     <CardContent className="ml-8 space-y-4">
                       {/* Required Documents */}
                       <div>
-                        <h4 className="font-semibold text-techbiz-navy mb-2">
+                        <h4 className="font-semibold text-foreground mb-2">
                           Required Documents:
                         </h4>
                         <div className="flex flex-wrap gap-2">
@@ -268,7 +268,7 @@ export default function Compliance() {
                           <>
                             <Button
                               size="sm"
-                              className="bg-techbiz-blue hover:bg-techbiz-blue/90"
+                              className="bg-primary hover:bg-primary/90"
                               onClick={() => toggleStepCompletion(step.id)}
                             >
                               <Upload className="h-4 w-4 mr-2" />
@@ -283,7 +283,7 @@ export default function Compliance() {
                             <Button
                               variant="outline"
                               size="sm"
-                              className="border-techbiz-green text-techbiz-green"
+                              className="border-accent text-accent"
                             >
                               <CheckCircle className="h-4 w-4 mr-2" />
                               Completed
@@ -308,7 +308,7 @@ export default function Compliance() {
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-techbiz-navy mb-8 text-center">
+            <h2 className="text-3xl font-bold text-foreground mb-8 text-center">
               Additional Licenses (Based on Business Type)
             </h2>
 
@@ -317,7 +317,7 @@ export default function Compliance() {
                 <Card key={index} className="border-0 shadow-lg">
                   <CardHeader>
                     <div className="flex justify-between items-start">
-                      <CardTitle className="text-lg text-techbiz-navy">
+                      <CardTitle className="text-lg text-foreground">
                         {license.name}
                       </CardTitle>
                       <Badge
@@ -338,17 +338,17 @@ export default function Compliance() {
                   </CardHeader>
                   <CardContent>
                     <div className="space-y-2">
-                      <p className="text-sm text-techbiz-gray">
+                      <p className="text-sm text-muted-foreground">
                         <strong>Required for:</strong> {license.required}
                       </p>
-                      <p className="text-sm text-techbiz-gray">
+                      <p className="text-sm text-muted-foreground">
                         <strong>Validity:</strong> {license.validity}
                       </p>
                     </div>
                     <Button
                       variant="outline"
                       size="sm"
-                      className="mt-4 border-techbiz-blue text-techbiz-blue hover:bg-techbiz-blue hover:text-white"
+                      className="mt-4 border-primary text-primary hover:bg-primary hover:text-white"
                     >
                       Learn More
                     </Button>
@@ -361,7 +361,7 @@ export default function Compliance() {
       </section>
 
       {/* Next Steps CTA */}
-      <section className="py-16 bg-techbiz-blue text-white">
+      <section className="py-16 bg-primary text-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl font-bold mb-6">Complete Your Journey</h2>
@@ -374,7 +374,7 @@ export default function Compliance() {
                 <Button
                   variant="secondary"
                   size="lg"
-                  className="bg-white text-techbiz-blue hover:bg-gray-100"
+                  className="bg-white text-primary hover:bg-gray-100"
                 >
                   Explore Government Schemes
                   <ArrowRight className="ml-2 h-4 w-4" />
@@ -384,7 +384,7 @@ export default function Compliance() {
                 <Button
                   variant="outline"
                   size="lg"
-                  className="border-white text-white hover:bg-white hover:text-techbiz-blue"
+                  className="border-white text-white hover:bg-white hover:text-primary"
                 >
                   View Progress Summary
                 </Button>
