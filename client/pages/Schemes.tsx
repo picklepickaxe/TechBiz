@@ -533,7 +533,7 @@ export default function Schemes() {
               >
                 Get Expert Consultation
               </Button>
-              <Link to="/business-types">
+              <Link to="/business-type">
                 <Button
                   variant="outline"
                   size="lg"

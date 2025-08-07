@@ -83,7 +83,7 @@ export default function Index() {
             </div>
             <div className="hidden md:flex items-center space-x-6">
               <Link
-                to="/business-types"
+                to="/business-type"
                 className="text-muted-foreground hover:text-techbiz-purple transition-colors font-medium"
               >
                 Business Types
@@ -150,7 +150,7 @@ export default function Index() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-              <Link to="/business-types">
+              <Link to="/business-type">
                 <Button
                   size="lg"
                   className="bg-techbiz-purple hover:bg-techbiz-purple/90 text-primary-foreground px-8 py-6 text-lg transition-all duration-300 hover:scale-105 hover:shadow-lg"
@@ -302,7 +302,7 @@ export default function Index() {
 
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               {businessTypes.map((type, index) => (
-                <Link key={index} to="/business-types">
+                <Link key={index} to="/business-type">
                   <Card className="border-techbiz-purple/30 bg-card/80 hover:bg-card/90 transition-all duration-300 cursor-pointer hover:scale-105 hover:shadow-lg hover:border-techbiz-purple/60">
                     <CardHeader className="text-center py-8">
                       <CardTitle className="text-foreground text-base md:text-lg">
@@ -315,7 +315,7 @@ export default function Index() {
             </div>
 
             <div className="mt-12">
-              <Link to="/business-types">
+              <Link to="/business-type">
                 <Button
                   size="lg"
                   className="bg-techbiz-purple hover:bg-techbiz-purple/90 text-primary-foreground px-8 py-6 text-lg transition-all duration-300 hover:scale-105 hover:shadow-lg"
@@ -370,7 +370,7 @@ export default function Index() {
               <ul className="space-y-2 text-muted-foreground">
                 <li>
                   <Link
-                    to="/business-types"
+                    to="/business-type"
                     className="hover:text-techbiz-purple transition-colors"
                   >
                     Business Registration
