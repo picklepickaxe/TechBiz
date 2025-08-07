@@ -13,6 +13,7 @@ import Schemes from "./pages/Schemes";
 import Summary from "./pages/Summary";
 import Chatbot from "./pages/Chatbot";
 import Gamification from "./pages/Gamification";
+import Analytics from "./pages/Analytics";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -31,6 +32,7 @@ const App = () => (
           <Route path="/summary" element={<Summary />} />
           <Route path="/chatbot" element={<Chatbot />} />
           <Route path="/gamification" element={<Gamification />} />
+          <Route path="/analytics" element={<Analytics />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
