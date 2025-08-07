@@ -63,6 +63,9 @@ export default {
           white: "hsl(var(--techbiz-white))",
           grey: "hsl(var(--techbiz-grey))",
           black: "hsl(var(--techbiz-black))",
+          blue: "hsl(var(--techbiz-blue))",
+          green: "hsl(var(--techbiz-green))",
+          navy: "hsl(var(--techbiz-navy))",
         },
       },
       borderRadius: {

@@ -536,7 +536,7 @@ export default function Schemes() {
               <Button size="lg" className="bg-primary hover:bg-primary/90">
                 Get Expert Consultation
               </Button>
-              <Link to="/business-types">
+              <Link to="/business-type">
                 <Button
                   variant="outline"
                   size="lg"

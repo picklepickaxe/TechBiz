@@ -130,7 +130,7 @@ export default function Compliance() {
               </span>
             </Link>
             <div className="flex items-center space-x-4">
-              <Link to="/business-types">
+              <Link to="/business-type">
                 <Button variant="outline" size="sm">
                   <ChevronLeft className="h-4 w-4 mr-2" />
                   Back to Business Types
