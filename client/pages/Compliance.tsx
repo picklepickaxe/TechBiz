@@ -152,13 +152,13 @@ export default function Compliance() {
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
               License & Compliance Journey
             </h1>
-            <p className="text-xl text-blue-100 mb-8">
+            <p className="text-xl text-primary-foreground/80 mb-8">
               Follow this step-by-step guide to ensure your business is fully
               compliant with all regulatory requirements in Delhi.
             </p>
 
             {/* Progress Overview */}
-            <div className="bg-white/10 rounded-lg p-6">
+            <div className="bg-primary-foreground/10 rounded-lg p-6">
               <div className="flex justify-between items-center mb-4">
                 <span className="text-lg font-semibold">Overall Progress</span>
                 <span className="text-lg">
@@ -167,7 +167,7 @@ export default function Compliance() {
               </div>
               <Progress
                 value={progressPercentage}
-                className="h-3 bg-white/20"
+                className="h-3 bg-primary-foreground/20"
               />
             </div>
           </div>
@@ -365,7 +365,7 @@ export default function Compliance() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl font-bold mb-6">Complete Your Journey</h2>
-            <p className="text-xl text-blue-100 mb-8">
+            <p className="text-xl text-primary-foreground/80 mb-8">
               Once you've completed the compliance steps, explore government
               schemes and growth opportunities for your business.
             </p>

@@ -221,7 +221,7 @@ export default function Schemes() {
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
               Government Schemes Dashboard
             </h1>
-            <p className="text-xl text-blue-100 mb-8">
+            <p className="text-xl text-primary-foreground/80 mb-8">
               Discover and compare government schemes tailored for your business
               type. Find funding opportunities, subsidies, and support programs.
             </p>
