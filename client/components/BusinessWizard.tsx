@@ -180,63 +180,95 @@ export default function BusinessWizard() {
                 </div>
               </div>
 
-              {/* Content */}
-              <div className="flex-1 p-6 space-y-4 overflow-y-auto">
+              {/* Chat Messages */}
+              <div className="flex-1 p-4 overflow-y-auto">
                 <div className="space-y-4">
-                  <h4 className="font-semibold flex items-center gap-2 text-foreground dark:text-white">
-                    <Star className="h-4 w-4 text-muted-foreground dark:text-gray-300" />
-                    Quick Business Insights
-                  </h4>
-
-                  <div className="space-y-3">
-                    {wizardTips.map((tip, index) => (
-                      <Card
-                        key={index}
-                        className={`border transition-colors cursor-pointer ${
-                          index === currentTip
-                            ? "border-foreground/30 bg-muted dark:bg-white/20"
-                            : "border-border hover:border-foreground/40 dark:border-gray-600 dark:hover:border-gray-400"
+                  {messages.map((message) => (
+                    <div
+                      key={message.id}
+                      className={`flex ${message.isBot ? 'justify-start' : 'justify-end'}`}
+                    >
+                      <div
+                        className={`max-w-xs lg:max-w-md px-4 py-2 rounded-lg ${
+                          message.isBot
+                            ? 'bg-muted dark:bg-white/20 text-foreground dark:text-white'
+                            : 'bg-primary text-primary-foreground'
                         }`}
-                        onClick={() => setCurrentTip(index)}
                       >
-                        <CardContent className="p-3">
-                          <p className="text-sm text-muted-foreground dark:text-gray-300">
-                            {tip}
-                          </p>
-                        </CardContent>
-                      </Card>
-                    ))}
-                  </div>
+                        {message.isBot && (
+                          <div className="flex items-center gap-2 mb-1">
+                            <Bot className="h-3 w-3" />
+                            <span className="text-xs opacity-70">AI Assistant</span>
+                          </div>
+                        )}
+                        <p className="text-sm">{message.text}</p>
+                      </div>
+                    </div>
+                  ))}
+
+                  {isTyping && (
+                    <div className="flex justify-start">
+                      <div className="bg-muted dark:bg-white/20 px-4 py-2 rounded-lg">
+                        <div className="flex items-center gap-2">
+                          <Bot className="h-3 w-3" />
+                          <div className="flex space-x-1">
+                            <div className="w-2 h-2 bg-primary rounded-full animate-bounce" style={{animationDelay: '0ms'}}></div>
+                            <div className="w-2 h-2 bg-primary rounded-full animate-bounce" style={{animationDelay: '150ms'}}></div>
+                            <div className="w-2 h-2 bg-primary rounded-full animate-bounce" style={{animationDelay: '300ms'}}></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  )}
+                </div>
+              </div>
+
+              {/* Chat Input */}
+              <div className="p-4 border-t border-border dark:border-gray-600">
+                <div className="flex gap-2">
+                  <Input
+                    value={inputMessage}
+                    onChange={(e) => setInputMessage(e.target.value)}
+                    placeholder="Ask me about business registration, schemes, licenses..."
+                    className="flex-1 border-border dark:border-gray-600"
+                    onKeyPress={(e) => e.key === 'Enter' && handleSendMessage()}
+                  />
+                  <Button
+                    onClick={handleSendMessage}
+                    disabled={!inputMessage.trim() || isTyping}
+                    size="sm"
+                    className="bg-primary hover:bg-primary/90"
+                  >
+                    <Send className="h-4 w-4" />
+                  </Button>
                 </div>
 
-                <div className="border-t border-border dark:border-gray-600 pt-4">
-                  <h4 className="font-semibold mb-3 flex items-center gap-2 text-foreground dark:text-white">
-                    <MessageCircle className="h-4 w-4 text-muted-foreground dark:text-gray-300" />
-                    Quick Actions
-                  </h4>
-
-                  <div className="space-y-2">
-                    <Button
-                      variant="outline"
-                      className="w-full justify-start border-border dark:border-gray-500 hover:bg-muted dark:hover:bg-white/20 text-muted-foreground dark:text-gray-300"
-                    >
-                      <Sparkles className="mr-2 h-4 w-4" />
-                      Find My Perfect Business Type
-                    </Button>
-
-                    <Button
-                      variant="outline"
-                      className="w-full justify-start border-border dark:border-gray-500 hover:bg-muted dark:hover:bg-white/20 text-muted-foreground dark:text-gray-300"
-                    >
-                      <Wand2 className="mr-2 h-4 w-4" />
-                      Check Scheme Eligibility
-                    </Button>
-
-                    <Button className="w-full bg-foreground dark:bg-white text-background dark:text-black hover:opacity-90">
-                      Start Business Journey
-                      <ArrowRight className="ml-2 h-4 w-4" />
-                    </Button>
-                  </div>
+                {/* Quick Actions */}
+                <div className="flex flex-wrap gap-2 mt-3">
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    onClick={() => setInputMessage("business registration")}
+                    className="text-xs"
+                  >
+                    Business Registration
+                  </Button>
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    onClick={() => setInputMessage("MSME benefits")}
+                    className="text-xs"
+                  >
+                    MSME Benefits
+                  </Button>
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    onClick={() => setInputMessage("government schemes")}
+                    className="text-xs"
+                  >
+                    Schemes
+                  </Button>
                 </div>
               </div>
             </div>
