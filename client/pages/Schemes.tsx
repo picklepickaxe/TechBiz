@@ -215,7 +215,7 @@ export default function Schemes() {
       </nav>
 
       {/* Header Section */}
-      <section className="py-16 bg-gradient-to-r from-techbiz-green to-techbiz-blue text-white">
+      <section className="py-16 bg-gradient-to-r from-accent to-primary text-primary-foreground">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
@@ -230,7 +230,7 @@ export default function Schemes() {
       </section>
 
       {/* Search and Filters */}
-      <section className="py-8 bg-white border-b">
+      <section className="py-8 bg-background border-b">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-6xl mx-auto">
             <div className="flex flex-col md:flex-row gap-4">
