@@ -36,6 +36,16 @@ export default function BusinessWizard() {
     "🏆 Shop & Establishment license is mandatory for all commercial setups!",
   ];
 
+  const aiResponses = {
+    'business registration': 'To register your business, you\'ll need: 1) Choose business structure (Sole Proprietorship, Partnership, MSME, or Startup) 2) Prepare required documents 3) Complete online registration. The process typically takes 5-7 days.',
+    'msme': 'MSME registration provides access to 50+ government schemes, easier loan approvals, and tax benefits. It\'s free and can be completed online through the Udyam portal in 1-2 days.',
+    'gst': 'GST registration is mandatory for businesses with turnover above ₹40 lakhs (₹20 lakhs for services). You\'ll need PAN, business registration certificate, and bank details. Processing takes 3-5 days.',
+    'startup': 'DPIIT Startup recognition offers 3 years income tax exemption, fast-track patent examination, and access to government schemes. Your startup should be less than 10 years old and have innovative business model.',
+    'schemes': 'Popular schemes include: PM MUDRA (loans up to ₹10 lakh), Stand-Up India (₹10 lakh - ₹1 crore), PM SVANidhi (street vendors), and Startup India Seed Fund. Each has specific eligibility criteria.',
+    'license': 'Common licenses include: Shop & Establishment (mandatory), Professional Tax, FSSAI (food businesses), Pollution Clearance (manufacturing), and Import-Export Code (international trade).',
+    'default': 'I can help you with business registration, MSME benefits, GST registration, startup schemes, government licensing, and compliance requirements. What specific topic interests you?'
+  };
+
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentTip((prev) => (prev + 1) % wizardTips.length);
@@ -43,6 +53,43 @@ export default function BusinessWizard() {
 
     return () => clearInterval(interval);
   }, []);
+
+  const generateAIResponse = (userMessage) => {
+    const message = userMessage.toLowerCase();
+    for (const [key, response] of Object.entries(aiResponses)) {
+      if (key !== 'default' && message.includes(key)) {
+        return response;
+      }
+    }
+    return aiResponses.default;
+  };
+
+  const handleSendMessage = async () => {
+    if (!inputMessage.trim()) return;
+
+    const userMessage = {
+      id: messages.length + 1,
+      text: inputMessage,
+      isBot: false,
+      timestamp: new Date()
+    };
+
+    setMessages(prev => [...prev, userMessage]);
+    setInputMessage("");
+    setIsTyping(true);
+
+    // Simulate AI thinking time
+    setTimeout(() => {
+      const aiResponse = {
+        id: messages.length + 2,
+        text: generateAIResponse(inputMessage),
+        isBot: true,
+        timestamp: new Date()
+      };
+      setMessages(prev => [...prev, aiResponse]);
+      setIsTyping(false);
+    }, 1500);
+  };
 
   return (
     <>
