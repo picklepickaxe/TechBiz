@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
 import { useState, useEffect } from "react";
 import {
   Sparkles,
@@ -8,6 +9,8 @@ import {
   MessageCircle,
   ArrowRight,
   X,
+  Send,
+  Bot,
 } from "lucide-react";
 
 export default function BusinessWizard() {
