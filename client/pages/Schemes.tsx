@@ -330,7 +330,9 @@ export default function Schemes() {
                           </p>
                         </div>
                         <div>
-                          <p className="text-muted-foreground">Processing Time</p>
+                          <p className="text-muted-foreground">
+                            Processing Time
+                          </p>
                           <p className="font-semibold text-foreground">
                             {scheme.processingTime}
                           </p>
@@ -448,13 +450,17 @@ export default function Schemes() {
                         </h4>
                         <div className="space-y-2 text-sm">
                           <div className="flex justify-between">
-                            <span className="text-muted-foreground">Amount:</span>
+                            <span className="text-muted-foreground">
+                              Amount:
+                            </span>
                             <span className="font-medium">
                               {scheme.loanAmount}
                             </span>
                           </div>
                           <div className="flex justify-between">
-                            <span className="text-muted-foreground">Subsidy:</span>
+                            <span className="text-muted-foreground">
+                              Subsidy:
+                            </span>
                             <span className="font-medium text-accent">
                               {scheme.subsidyRate}
                             </span>
@@ -527,10 +533,7 @@ export default function Schemes() {
               specific business type, industry, and growth stage.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button
-                size="lg"
-                className="bg-primary hover:bg-primary/90"
-              >
+              <Button size="lg" className="bg-primary hover:bg-primary/90">
                 Get Expert Consultation
               </Button>
               <Link to="/business-types">
