@@ -305,22 +305,29 @@ export default function BusinessWizard() {
 
               {/* Chat Input */}
               <div className="p-4 border-t border-border dark:border-gray-600">
-                <div className="flex gap-2">
-                  <Input
-                    value={inputMessage}
-                    onChange={(e) => setInputMessage(e.target.value)}
-                    placeholder="Ask me about business registration, schemes, licenses..."
-                    className="flex-1 border-border dark:border-gray-600"
-                    onKeyPress={(e) => e.key === 'Enter' && handleSendMessage()}
-                  />
-                  <Button
-                    onClick={handleSendMessage}
-                    disabled={!inputMessage.trim() || isTyping}
-                    size="sm"
-                    className="bg-primary hover:bg-primary/90"
-                  >
-                    <Send className="h-4 w-4" />
-                  </Button>
+                <div className="space-y-3">
+                  <div className="flex gap-2">
+                    <Input
+                      value={inputMessage}
+                      onChange={(e) => setInputMessage(e.target.value)}
+                      placeholder="Type your question here... e.g., 'How do I start a business in Delhi?'"
+                      className="flex-1 border-border dark:border-gray-600 text-sm"
+                      onKeyPress={(e) => e.key === 'Enter' && !e.shiftKey && handleSendMessage()}
+                      disabled={isTyping}
+                    />
+                    <Button
+                      onClick={handleSendMessage}
+                      disabled={!inputMessage.trim() || isTyping}
+                      size="sm"
+                      className="bg-primary hover:bg-primary/90 text-primary-foreground"
+                    >
+                      <Send className="h-4 w-4" />
+                    </Button>
+                  </div>
+
+                  <div className="text-xs text-muted-foreground dark:text-gray-400 px-1">
+                    💡 Try asking: \"What documents do I need for GST?\" or \"How much does business registration cost?\"
+                  </div>
                 </div>
 
                 {/* Quick Actions */}
