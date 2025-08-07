@@ -17,6 +17,16 @@ export default function BusinessWizard() {
   const [isExpanded, setIsExpanded] = useState(false);
   const [currentTip, setCurrentTip] = useState(0);
   const [showTip, setShowTip] = useState(true);
+  const [messages, setMessages] = useState([
+    {
+      id: 1,
+      text: "Hello! I'm your Business Wizard. I can help you with business registration, licensing, and government schemes. What would you like to know?",
+      isBot: true,
+      timestamp: new Date()
+    }
+  ]);
+  const [inputMessage, setInputMessage] = useState("");
+  const [isTyping, setIsTyping] = useState(false);
 
   const wizardTips = [
     "💡 Did you know? MSME registration gives you access to 200+ government schemes!",
